@@ -2,87 +2,125 @@
 export const navItems = {
   Home: [
     {
+      title: "Home",
+      href: "/",
+    },
+    {
       title: "About Us",
       href: "/home/about",
-      description: "Learn more about our organization and mission.",
-    },
-    {
-      title: "News",
-      href: "/home/news",
-      description: "Stay updated with the latest announcements and news.",
-    },
-    {
-      title: "Gallery",
-      href: "/home/gallery",
-      description: "View photos and highlights from past events.",
     },
   ],
   Committee: [
     {
-      title: "Our Team",
-      href: "/committee/team",
-      description: "Meet the dedicated individuals behind the event.",
+      title: "Patrons",
+      href: "/committee/patrons",
     },
     {
-      title: "Advisors",
-      href: "/committee/advisors",
-      description: "Get to know our expert advisors and mentors.",
+      title: "General Chair",
+      href: "/committee/general-chair",
     },
     {
-      title: "Roles",
-      href: "/committee/roles",
-      description: "Understand different roles within our organization.",
+      title: "Organizing Chair",
+      href: "/committee/organizing-chair",
+    },
+    {
+      title: "CFIIITs Steering Committee",
+      href: "/committee/cfiiits-steering-committee",
+    },
+    {
+      title: "Editorial Board",
+      href: "/committee/editorial-board",
+    },
+    {
+      title: "International Advisory Committee",
+      href: "/committee/international-advisory-committee",
+    },
+    {
+      title: "Technical Program Committee",
+      href: "/committee/technical-program-committee",
+    },
+    {
+      title: "All Committees",
+      href: "/committee/all-committees",
     },
   ],
   Calls: [
     {
-      title: "Call for Papers",
+      title: "Call for Paper",
       href: "/calls/papers",
-      description: "Submit your research papers for review.",
     },
     {
-      title: "Call for Workshops",
-      href: "/calls/workshops",
-      description: "Propose your workshops for the event.",
+      title: "Call for Synopsis",
+      href: "/calls/synopsis",
     },
     {
-      title: "Call for Volunteers",
-      href: "/calls/volunteers",
-      description: "Join us and contribute to the event as a volunteer.",
+      title: "Call for Special Track/Tutorial/Exhibition/Panel Discussion",
+      href: "/calls/special-tracks-tutorials-exhibitions-panel-discussions",
+    },
+    {
+      title: "Tracks",
+      subItems: [
+        {
+          title: "Regular Tracks",
+          href: "/calls/tracks/regular-tracks",
+        },
+        {
+          title: "Special Tracks",
+          href: "/calls/tracks/special-tracks",
+        },
+      ],
+    },
+    {
+      title: "Submission Guidelines",
+      href: "/calls/submission-guidelines",
     },
   ],
   Registration: [
     {
-      title: "Attendee Registration",
-      href: "/registration/attendees",
-      description: "Register to attend the event and participate.",
+      title: "Registration",
+      href: "/registration/registration",
     },
     {
-      title: "Speaker Registration",
-      href: "/registration/speakers",
-      description: "Apply to be a speaker at the event.",
+      title: "Pay Online",
+      href: "/registration/pay-online",
     },
     {
-      title: "Sponsorship Registration",
+      title: "Sponsors",
       href: "/registration/sponsors",
-      description: "Partner with us and support the event.",
     },
   ],
   Events: [
     {
-      title: "Keynote Sessions",
-      href: "/events/keynotes",
-      description: "Attend inspiring keynote sessions by industry leaders.",
+      title: "Keynote Speaker",
+      href: "/events/keynote-speaker",
     },
     {
-      title: "Workshops",
-      href: "/events/workshops",
-      description: "Join interactive workshops and hands-on sessions.",
+      title: "Tutorial",
+      href: "/events/tutorial",
     },
     {
-      title: "Networking",
-      href: "/events/networking",
-      description: "Connect with professionals and peers in the field.",
+      title: "Panel Discussions",
+      href: "/events/panel-discussions",
+    },
+    {
+      title: "Regular Track Schedule",
+      href: "/events/regular-track-schedule",
+    },
+    {
+      title: "Special Track Schedule",
+      href: "/events/special-track-schedule",
+    },
+    {
+      title: "PhD Symposium",
+      href: "/events/phd-symposium",
+    },
+    {
+      title: "MTech Symposium",
+      href: "/events/mtech-symposium",
+    },
+    {
+      title: "Schedule",
+      href: "/events/schedule",
     },
   ],
 };

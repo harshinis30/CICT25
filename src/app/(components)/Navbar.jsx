@@ -10,10 +10,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { navItems } from "../data/navItems"; 
+import { navItems } from "../data/navItems";
 
 export default function Component() {
   const [expandedCategory, setExpandedCategory] = useState(null);
+  const [expandedSubItem, setExpandedSubItem] = useState(null);
 
   return (
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
@@ -61,14 +62,49 @@ export default function Component() {
                   {expandedCategory === category && (
                     <div className="space-y-1 pl-4">
                       {items.map((item) => (
-                        <Link
-                          key={item.title}
-                          href={item.href}
-                          className="flex w-full items-center py-2 text-base"
-                          prefetch={false}
-                        >
-                          {item.title}
-                        </Link>
+                        <div key={item.title}>
+                          <div
+                            className="flex items-center justify-between w-full"
+                            onClick={() => {
+                              if (item.subItems) {
+                                setExpandedSubItem((prev) =>
+                                  prev === item.title ? null : item.title
+                                );
+                              }
+                            }}
+                          >
+                            <Link
+                              href={item.href || "#"}
+                              className="flex w-full items-center py-2 text-base"
+                              prefetch={false}
+                            >
+                              {item.title}
+                            </Link>
+                            {item.subItems && (
+                              <ChevronDownIcon
+                                className={`h-4 w-4 transition-transform ${
+                                  expandedSubItem === item.title
+                                    ? "rotate-180"
+                                    : ""
+                                }`}
+                              />
+                            )}
+                          </div>
+                          {item.subItems && expandedSubItem === item.title && (
+                            <div className="pl-4">
+                              {item.subItems.map((subItem) => (
+                                <Link
+                                  key={subItem.title}
+                                  href={subItem.href || "#"}
+                                  className="flex w-full items-center py-2 text-base"
+                                  prefetch={false}
+                                >
+                                  {subItem.title}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
                   )}
@@ -90,28 +126,59 @@ export default function Component() {
             key={category}
             className="relative group"
             onMouseEnter={() => setExpandedCategory(category)}
-            onMouseLeave={() => setExpandedCategory(null)}
           >
             <Button
               variant="ghost"
-              className="text-base font-medium text-gray-700 hover:text-blue-600"
+              className="text-base font-medium text-gray-700 hover:text-blue-600 border-t-4 border-transparent hover:border-blue-500"
             >
               {category} <ChevronDownIcon className="h-4 w-4 ml-1" />
             </Button>
             {expandedCategory === category && (
               <div
-                className="absolute bg-white shadow-lg rounded-lg p-4 space-y-2 min-w-[200px] mt-1 transition-opacity duration-300"
+                className="absolute bg-white shadow-lg rounded-lg p-2 space-y-2 min-w-[200px] mt-1 transition-opacity duration-300"
                 onMouseEnter={() => setExpandedCategory(category)}
                 onMouseLeave={() => setExpandedCategory(null)}
               >
                 {items.map((item) => (
-                  <Link
-                    key={item.title}
-                    href={item.href}
-                    className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-                  >
-                    {item.title}
-                  </Link>
+                  <div key={item.title}>
+                    <div
+                      className="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 p-1"
+                      onClick={() => {
+                        if (item.subItems) {
+                          setExpandedSubItem((prev) =>
+                            prev === item.title ? null : item.title
+                          );
+                        }
+                      }}
+                    >
+                      <Link
+                        href={item.href || "#"}
+                        className="block px-4 py-2 text-sm text-gray-600"
+                      >
+                        {item.title}
+                      </Link>
+                      {item.subItems && (
+                        <ChevronDownIcon
+                          className={`h-4 w-4 transition-transform ${
+                            expandedSubItem === item.title ? "rotate-180" : ""
+                          }`}
+                        />
+                      )}
+                    </div>
+                    {item.subItems && expandedSubItem === item.title && (
+                      <div className="pl-4">
+                        {item.subItems.map((subItem) => (
+                          <Link
+                            key={subItem.title}
+                            href={subItem.href || "#"}
+                            className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+                          >
+                            {subItem.title}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             )}
