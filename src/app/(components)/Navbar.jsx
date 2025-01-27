@@ -28,7 +28,7 @@ export default function Component() {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="left">
+          <SheetContent side="left" className="w-[300px] flex flex-col h-full">
             {/* Logo Inside Sheet */}
             <div className="flex items-center justify-center mb-6">
               <MountainIcon className="h-8 w-8" />
@@ -41,76 +41,79 @@ export default function Component() {
             </VisuallyHidden>
 
             {/* Navigation Items */}
-            <div className="grid gap-2 py-6">
-              {Object.entries(navItems).map(([category, items]) => (
-                <div key={category}>
-                  <button
-                    onClick={() =>
-                      setExpandedCategory((prev) =>
-                        prev === category ? null : category
-                      )
-                    }
-                    className="flex w-full items-center justify-between py-2 text-lg font-semibold"
-                  >
-                    <span>{category}</span>
-                    <ChevronDownIcon
-                      className={`h-5 w-5 transition-transform ${
-                        expandedCategory === category ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  {expandedCategory === category && (
-                    <div className="space-y-1 pl-4">
-                      {items.map((item) => (
-                        <div key={item.title}>
-                          <div
-                            className="flex items-center justify-between w-full"
-                            onClick={() => {
-                              if (item.subItems) {
-                                setExpandedSubItem((prev) =>
-                                  prev === item.title ? null : item.title
-                                );
-                              }
-                            }}
-                          >
-                            <Link
-                              href={item.href || "#"}
-                              className="flex w-full items-center py-2 text-base"
-                              prefetch={false}
+            <nav className="flex-1 overflow-y-auto">
+              <div className="grid gap-2 py-6">
+                {Object.entries(navItems).map(([category, items]) => (
+                  <div key={category}>
+                    <button
+                      onClick={() =>
+                        setExpandedCategory((prev) =>
+                          prev === category ? null : category
+                        )
+                      }
+                      className="flex w-full items-center justify-between py-2 text-lg font-semibold"
+                    >
+                      <span>{category}</span>
+                      <ChevronDownIcon
+                        className={`h-5 w-5 transition-transform ${
+                          expandedCategory === category ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {expandedCategory === category && (
+                      <div className="space-y-1 pl-4">
+                        {items.map((item) => (
+                          <div key={item.title}>
+                            <div
+                              className="flex items-center justify-between w-full"
+                              onClick={() => {
+                                if (item.subItems) {
+                                  setExpandedSubItem((prev) =>
+                                    prev === item.title ? null : item.title
+                                  );
+                                }
+                              }}
                             >
-                              {item.title}
-                            </Link>
-                            {item.subItems && (
-                              <ChevronDownIcon
-                                className={`h-4 w-4 transition-transform ${
-                                  expandedSubItem === item.title
-                                    ? "rotate-180"
-                                    : ""
-                                }`}
-                              />
-                            )}
-                          </div>
-                          {item.subItems && expandedSubItem === item.title && (
-                            <div className="pl-4">
-                              {item.subItems.map((subItem) => (
-                                <Link
-                                  key={subItem.title}
-                                  href={subItem.href || "#"}
-                                  className="flex w-full items-center py-2 text-base"
-                                  prefetch={false}
-                                >
-                                  {subItem.title}
-                                </Link>
-                              ))}
+                              <Link
+                                href={item.href || "#"}
+                                className="flex w-full items-center py-2 text-base"
+                                prefetch={false}
+                              >
+                                {item.title}
+                              </Link>
+                              {item.subItems && (
+                                <ChevronDownIcon
+                                  className={`h-4 w-4 transition-transform ${
+                                    expandedSubItem === item.title
+                                      ? "rotate-180"
+                                      : ""
+                                  }`}
+                                />
+                              )}
                             </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+                            {item.subItems &&
+                              expandedSubItem === item.title && (
+                                <div className="pl-4">
+                                  {item.subItems.map((subItem) => (
+                                    <Link
+                                      key={subItem.title}
+                                      href={subItem.href || "#"}
+                                      className="flex w-full items-center py-2 text-base"
+                                      prefetch={false}
+                                    >
+                                      {subItem.title}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </nav>
           </SheetContent>
         </Sheet>
 
