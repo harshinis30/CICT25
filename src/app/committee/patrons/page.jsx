@@ -20,7 +20,7 @@ export default function PatronsPage() {
         {Patrons.Patrons.map((patron, index) => (
           <Card key={index} className="shadow-md">
             <CardHeader>
-              <CardImage src={patron.image} alt={patron.title} className="h-48 object-cover" />
+              <CardImage src={patron.image} alt={patron.title} className="w-full h-auto aspect-[4/3] object-contain" />
             </CardHeader>
             <CardContent className="text-center">
               <CardTitle className="text-primary">{patron.title}</CardTitle>
