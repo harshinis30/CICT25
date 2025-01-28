@@ -33,7 +33,7 @@ const CardImage = React.forwardRef(({ src, alt, className, ...props }, ref) => (
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <h3
     ref={ref}
-    className={cnJoin("text-2xl text-blue-500 font-semibold leading-none tracking-tight", className)}
+    className={cnJoin("text-2xl text-blue-600 font-semibold leading-none tracking-tight", className)}
     {...props} />
 ))
 CardTitle.displayName = "CardTitle"
