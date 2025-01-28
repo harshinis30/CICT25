@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { InternationalAdvisoryCommittee } from "@/app/data/international-advisory-committee";
 import SocialMediaCard from "@/app/(components)/SocialMediaCard";
 
-export default function PatronsPage() {
+export default function InternationalAdvisoryCommittee() {
   return (
     <main className="container mx-auto my-10 px-4">
       <h1 className="text-5xl text-blue-900 font-bold text-center mb-7">International Advisory Committee</h1>
