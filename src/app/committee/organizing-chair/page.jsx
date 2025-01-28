@@ -23,7 +23,7 @@ const page = () => {
           <ScrollFadeIn>
             <div className="flex flex-wrap justify-center gap-8">
               {chairs.members.map((member, memberIndex) => (
-                <SocialMediaCard key={memberIndex} patron={member} />
+                <SocialMediaCard key={memberIndex} person={member} />
               ))}
             </div>
           </ScrollFadeIn>
