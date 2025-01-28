@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "../../../components/ui/card";
 
-import { Patrons } from "../../data/committee";
+import { Patrons } from "../../data/patrons";
 
 export default function PatronsPage() {
   return (
