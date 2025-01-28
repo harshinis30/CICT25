@@ -1,7 +1,7 @@
 export const TechnicalProgramCommittee = {
     "Members": [
     {
-        name: "Prof. U S Tiwary",
+        title: "Prof. U S Tiwary",
         affiliation: "IIIT-Allahabad (Chair)",
         image: "/assets/images/technical-program-committee/tiwary.jpg",
         socialLinks: {
@@ -11,7 +11,7 @@ export const TechnicalProgramCommittee = {
         }
     },
     {
-        name: "Prof. Yogesh Chauhan",
+        title: "Prof. Yogesh Chauhan",
         affiliation: "IIT-Kanpur",
         image: "/assets/images/technical-program-committee/chauhan.jpg",
         socialLinks: {
@@ -21,7 +21,7 @@ export const TechnicalProgramCommittee = {
         }
     },
     {
-        name: "Prof. Y N Singh",
+        title: "Prof. Y N Singh",
         affiliation: "IIT Kanpur",
         image: "/assets/images/technical-program-committee/singh.jpg",
         socialLinks: {
@@ -31,7 +31,7 @@ export const TechnicalProgramCommittee = {
         }
     },
     {
-        name: "Prof. Kumar Vaibhav Srivastava",
+        title: "Prof. Kumar Vaibhav Srivastava",
         affiliation: "IIT Kanpur",
         image: "/assets/images/technical-program-committee/srivastava.jpg",
         socialLinks: {
@@ -41,7 +41,7 @@ export const TechnicalProgramCommittee = {
         },
     },
     {
-        name: "Prof. Ganesh Ramakrishnan",
+        title: "Prof. Ganesh Ramakrishnan",
         affiliation: "IIT Bombay",
         image: "/assets/images/technical-program-committee/ramakrishnan.jpg",
         socialLinks: {
@@ -51,7 +51,7 @@ export const TechnicalProgramCommittee = {
         }
     },
     {
-        name: "Prof. D. Manjunath",
+        title: "Prof. D. Manjunath",
         affiliation: "IIT Bombay",
         image: "/assets/images/technical-program-committee/manjunath.jpg",
         socialLinks: {
@@ -61,7 +61,7 @@ export const TechnicalProgramCommittee = {
         }
     },
     {
-        name: "Prof. Chockalingam",
+        title: "Prof. Chockalingam",
         affiliation: "IISc Bangalore",
         image: "/assets/images/technical-program-committee/chockalingam.jpg",
         socialLinks: {
@@ -71,7 +71,7 @@ export const TechnicalProgramCommittee = {
         }
     },
     {
-        name: "Prof. A G Ramakrishna",
+        title: "Prof. A G Ramakrishna",
         affiliation: "IISc Bangalore",
         image: "/assets/images/technical-program-committee/ramakrishna.jpg",
         socialLinks: {
@@ -81,7 +81,7 @@ export const TechnicalProgramCommittee = {
         }
     },
     {
-        name: "Prof. Manav Bhatnagar",
+        title: "Prof. Manav Bhatnagar",
         affiliation: "IIT-Delhi",
         image: "/assets/images/technical-program-committee/bhatnagar.jpg",
         socialLinks: {

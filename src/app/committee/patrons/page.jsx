@@ -12,7 +12,7 @@ export default function PatronsPage() {
       <h1 className="text-5xl text-blue-900 font-bold text-center mb-10">Patrons</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         {Patrons.Patrons.map((patron, index) => (
-          <SocialMediaCard key={index} patron={patron} />
+          <SocialMediaCard key={index} person={patron} />
         ))}
       </div>
     </main>

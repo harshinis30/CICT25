@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "./../../components/ui/card";
 
-function SocialMediaCard({ patron }) {
+function SocialMediaCard({ person }) {
     const [showIcons, setShowIcons] = useState(false);
   
     const handleImageClick = () => {
@@ -22,8 +22,8 @@ function SocialMediaCard({ patron }) {
           onClick={handleImageClick} // Mobile interaction
         >
           <img
-            src={patron.image}
-            alt={patron.title}
+            src={person.image}
+            alt={person.title}
             className="w-full h-auto aspect-[4/3] object-contain transform group-hover:scale-110 transition-transform duration-500"
           />
   
@@ -37,7 +37,7 @@ function SocialMediaCard({ patron }) {
           >
             <div className="flex space-x-4">
               <a
-                href={patron.socialLinks.facebook}
+                href={person.socialLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border-2 border-black"
@@ -52,7 +52,7 @@ function SocialMediaCard({ patron }) {
               </a>
   
               <a
-                href={patron.socialLinks.twitter}
+                href={person.socialLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border-2 border-black"
@@ -67,7 +67,7 @@ function SocialMediaCard({ patron }) {
               </a>
   
               <a
-                href={patron.socialLinks.instagram}
+                href={person.socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border-1 border-black"
@@ -87,8 +87,8 @@ function SocialMediaCard({ patron }) {
   
         {/* Card Content */}
         <CardContent className="text-center mt-4">
-          <CardTitle className="text-primary">{patron.title}</CardTitle>
-          <CardDescription>{patron.description}</CardDescription>
+          <CardTitle className="text-primary">{person.title}</CardTitle>
+          <CardDescription>{person.description}</CardDescription>
         </CardContent>
       </Card>
     );
