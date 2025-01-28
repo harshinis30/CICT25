@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollFadeIn from '@/app/(components)/scroll-animation';
 import SocialMediaCard from '@/app/(components)/SocialMediaCard';
-import { OrganizingChairs } from '@/app/data/organizing_chairs';
+import { OrganizingChairs } from '@/app/data/organizing-chairs';
 
 const page = () => {
   return (

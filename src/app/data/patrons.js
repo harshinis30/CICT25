@@ -21,7 +21,7 @@ export const Patrons = {
       },
     },
     {
-      image: "/assets/images/patrons//sn_singh.jpg",
+      image: "/assets/images/patrons/sn_singh.jpg",
       title: "Prof. S. N. Singh",
       description: "Director, IIITM Gwalior",
       socialLinks: {
@@ -31,7 +31,7 @@ export const Patrons = {
       },
     },
     {
-      image: "/assets/images/patrons//karthikeyan.jpg",
+      image: "/assets/images/patrons/karthikeyan.jpg",
       title: "Prof. M. V. Kartikeyan",
       description: "Director, IIITDM Kancheepuram",
       socialLinks: {
@@ -41,7 +41,7 @@ export const Patrons = {
       },
     },
     {
-      image: "/assets/images/patrons//dvln_somayajulu.jpg",
+      image: "/assets/images/patrons/dvln_somayajulu.jpg",
       title: "Prof. D V L N Somayajulu",
       description: "Director, IIITDM Kurnool",
       socialLinks: {
