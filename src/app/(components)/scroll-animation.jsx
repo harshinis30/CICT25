@@ -9,17 +9,14 @@ const ScrollFadeIn = ({ children }) => {
     const handleScroll = () => {
       if (elementRef.current) {
         const rect = elementRef.current.getBoundingClientRect();
-        const elementCenter = rect.top + rect.height / 2; 
-        const viewportCenter = window.innerHeight / 2; 
-
-        if (Math.abs(elementCenter - viewportCenter) <= rect.height) {
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
           setIsVisible(true);
         }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); 
+    handleScroll(); // Check visibility on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
