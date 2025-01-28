@@ -17,7 +17,8 @@ export default function Component() {
   const [expandedSubItem, setExpandedSubItem] = useState(null);
 
   return (
-    <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
+    <header className="fixed top-0 left-0 right-0 flex h-20 w-full shrink-0 items-center px-4 md:px-6 
+  bg-white/80 backdrop-blur-md z-50 border-b shadow-sm">
       {/* Mobile Navigation */}
       <div className="flex items-center justify-between w-full lg:hidden">
         {/* Burger Icon */}
