@@ -1,0 +1,21 @@
+@keyframes pop_animation {
+    0% {
+        scale: 1;
+    }
+    50%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.pop:hover{
+    animation-name: pop_animation;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+}
+
+.slight-tilt:hover{
+    rotate:5deg;
+}
