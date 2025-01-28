@@ -1,9 +1,30 @@
-import React from 'react'
+"use client";
 
-const page = () => {
+import React, { useState } from "react";
+
+
+import { InternationalAdvisoryCommittee } from "@/app/data/international-advisory-committee";
+import SocialMediaCard from "@/app/(components)/SocialMediaCard";
+
+export default function PatronsPage() {
   return (
-    <div>page</div>
-  )
+    <main className="container mx-auto my-10 px-4">
+      <h1 className="text-5xl text-blue-900 font-bold text-center mb-7">International Advisory Committee</h1>
+      <h2 className="text-2xl font-bold text-blue-900 text-center mb-10">Experts from India</h2>    
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 p-4">
+        {InternationalAdvisoryCommittee.ExpertsFromIndia.map((Indian, index) => (
+          <SocialMediaCard key={index} person={Indian} />
+        ))}
+      </div>
+      <div className="p-12"></div>
+      <h2 className="text-2xl font-bold text-blue-900 text-center mb-10">Experts from Foreign Nations</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        {InternationalAdvisoryCommittee.ExpertsFromForeign.map((Foreigner, index) => (
+          <SocialMediaCard key={index} person={Foreigner} />
+        ))}
+      </div>
+    </main>
+  );
 }
 
-export default page
+
