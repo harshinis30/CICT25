@@ -16,20 +16,12 @@ export const navItems = {
       href: "/committee/patrons",
     },
     {
-      title: "General Chair",
-      href: "/committee/general-chair",
-    },
-    {
       title: "Organizing Chair",
       href: "/committee/organizing-chair",
     },
     {
       title: "CFIIITs Steering Committee",
       href: "/committee/cfiiits-steering-committee",
-    },
-    {
-      title: "Editorial Board",
-      href: "/committee/editorial-board",
     },
     {
       title: "International Advisory Committee",

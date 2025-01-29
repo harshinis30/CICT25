@@ -127,7 +127,9 @@ export default function Component() {
 
       {/* Desktop Navigation */}
       <nav className="mx-auto text-lg hidden lg:flex gap-6 z-10">
-        <MountainIcon className="h-8 w-8 hover:cursor-pointer z-10" />
+        <a href="/">
+          <MountainIcon className="h-8 w-8 hover:cursor-pointer z-10" />
+        </a>
         {Object.entries(navItems).map(([category, items]) => (
           <div
             key={category}
