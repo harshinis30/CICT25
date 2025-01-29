@@ -8,17 +8,20 @@ import {
   CardTitle,
 } from "./../../components/ui/card";
 
-function SocialMediaCard({ person }) {
-    const [showIcons, setShowIcons] = useState(false);
+function SocialMediaCard({ patron }) {
+    const [showIcons, setShowIcons] = useState(true);
   
     const handleImageClick = () => {
       setShowIcons(!showIcons); // Toggle icons for mobile view
+      
     };
   
     return (
       <Card className="shadow-md">
         <div 
           className="relative group overflow-hidden"
+          onMouseEnter={handleImageClick} // Mobile interaction
+          onMouseLeave={handleImageClick} // Mobile interaction
           onClick={handleImageClick} // Mobile interaction
         >
           <img
@@ -29,10 +32,7 @@ function SocialMediaCard({ person }) {
   
           <div
             className={`
-              absolute inset-0 flex flex-col items-center justify-center space-y-4 
-              bg-white/80 transition-opacity duration-500
-              ${showIcons ? "opacity-100" : "opacity-0"} 
-              md:opacity-0 md:group-hover:opacity-100
+              ${showIcons ? "hidden" : " absolute inset-0 flex flex-col items-center justify-center space-y-4 bg-white/80 transition-opacity duration-500 md:opacity-0 md:group-hover:opacity-100"} 
             `}
           >
             <div className="flex space-x-4">
