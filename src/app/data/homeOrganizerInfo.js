@@ -17,7 +17,7 @@ export const homeOrganizerInfo=[
     },
     {
         logo:'/temp/some.jpg',
-        name:'IIITDM Allahabad',
+        name:'IIIT Allahabad',
         title:'Co-Organizer',
         links:{
             

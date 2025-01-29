@@ -123,10 +123,10 @@ const Home=()=>{
             Organizing Institutes<br/>
             CICT 2025
         </div>
-        <div className="text-center text-white text-xl font-bold mt-10 mb-20">
+        <div className="text-center text-white text-xl font-bold mt-10 mb-2">
             Organizers & Co-Organizers
         </div>
-        <OrganizerCards/>
+            <OrganizerCards/>
     </div>
     </>
     )
