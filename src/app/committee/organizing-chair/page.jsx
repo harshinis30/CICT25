@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollFadeIn from '@/app/(components)/scroll-animation';
 import SocialMediaCard from '@/app/(components)/SocialMediaCard';
-import { OrganizingChairs } from '@/app/data/organizing_chairs';
+import { OrganizingChairs } from '@/app/data/organizing-chairs';
 
 const page = () => {
   return (
@@ -17,11 +17,11 @@ const page = () => {
           </div>
 
           <ScrollFadeIn>
-          <div className="flex flex-wrap justify-center gap-8 h-15">
-            {chairs.members.map((member, memberIndex) => (
-                <SocialMediaCard key={memberIndex} patron={member} />
-            ))}
-          </div>
+            <div className="flex flex-wrap justify-center gap-8">
+              {chairs.members.map((member, memberIndex) => (
+                <SocialMediaCard key={memberIndex} person={member} />
+              ))}
+            </div>
           </ScrollFadeIn>
         </div>
       ))}
