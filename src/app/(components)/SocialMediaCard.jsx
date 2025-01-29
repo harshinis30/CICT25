@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "./../../components/ui/card";
 
-function SocialMediaCard({ patron }) {
+function SocialMediaCard({ person }) {
     const [showIcons, setShowIcons] = useState(true);
   
     const handleImageClick = () => {
