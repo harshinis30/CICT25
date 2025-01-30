@@ -9,7 +9,7 @@ const Page = () => {
         <div className='mb-10'>
           <h1 className='text-5xl font-bold text-[#13287D]'>Call for Papers</h1>
         </div>
-        <div className='flex md:flex-row flex-col w-full lg:w-5/6 mx-auto items-start md:text-lg lg:text-xl'>
+        <div className='flex md:flex-row flex-col w-full lg:w-3/4 gap-4 mx-auto items-start md:text-lg lg:text-xl'>
           <div className='flex flex-col md:w-1/2 text-left'>
             <div>
               <h3 className='text-xl font-semibold text-[#13287D]'>Regular Track</h3>
