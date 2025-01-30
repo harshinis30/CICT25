@@ -118,7 +118,7 @@ const Home=()=>{
     </div>
 
     <div className="flex flex-col items-center bg-[#279E64] rounded-xl pb-40">
-        <img className="w-2/6 md:w-1/12 slight-tilt duration-500" src="/temp/iiitdm_logo.webp"/>
+        <img className="w-2/6 md:w-1/12 slight-tilt duration-500" src="/logos/iiitdm_white.png"/>
         <div className="text-center text-white text-3xl font-bold">
             Organizing Institutes<br/>
             CICT 2025
