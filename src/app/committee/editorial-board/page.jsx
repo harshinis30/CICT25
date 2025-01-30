@@ -1,9 +1,10 @@
-import React from 'react'
-
-const page = () => {
+//import editorial from "@/data/editorial";
+import EditorialPanel  from '@/app/data/editorial';
+export default function Home() {
   return (
-    <div>page</div>
-  )
+    <main className="min-h-screen bg-gray-100">
+      <EditorialPanel />
+    </main>
+  );
 }
 
-export default page
