@@ -13,7 +13,7 @@ function OrganizerCards(){
                 >
                     <img className="w-fit" src={college.logo}/>
                 </div>
-                <div className="text-center text-xl font-bold">
+                <div className="my-2 text-center text-xl font-bold">
                     {college.name}
                 </div>
                 <div className="text-center">

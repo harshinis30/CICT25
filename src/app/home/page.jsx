@@ -3,24 +3,10 @@
 import React from "react";
 import './home.css';
 import InfoCards from "./InfoCards";
-import { homeAboutCICT } from "../data/homeAboutCICT";
 import { homeUsefulButtons } from "../data/homeUsefulButtons"
 import OrganizerCards from "./OrganizerCards";
-
-const previousOrganizersList=()=>{
-    const organizerList=homeAboutCICT.previousOrganizers.map((organizers,index)=>{
-        return(
-            <li key={index}>
-                <a href={organizers.link} target="_blank">{organizers.name}</a>
-            </li>
-        )
-    });
-    return(
-        <>
-            {organizerList}
-        </>
-    )
-}
+import PreviousOrganizersList from "./PreviousOrganizerList";
+import CountDown from "../(components)/CountDown";
 
 const buttonList=()=>{
     const buttons=homeUsefulButtons.map((button,index)=>{
@@ -51,8 +37,9 @@ const Home=()=>{
     return(
     <>
     <div className="md:flex bg-[#E6F7FF] w-full h-fit px-4 py-10 md:p-0">
-        <div className="flex flex-col w-fit bg-[#E6F7FF] py-8 mx-8 md:w-1/2 md:mx-20 md:my-24">
-            <div className="flex flex-col md:flex-row md:items-center gap-5">
+        <div className="flex flex-col w-fit bg-[#E6F7FF] py-8 mx-8 md:w-1/2 md:mx-20">
+            <CountDown targetDate="2025-12-18T23:59:59"/>
+            <div className="flex flex-col md:flex-row md:items-center gap-5 md:mt-24">
                 <img className="w-2/6 md:w-1/6 slight-tilt duration-500" src="/logos/iiitdm_logo.png"/>
                 <div className="text-2xl font-bold">
                     Indian Institute of Information Technology, Design and Manufacturing, Kancheepuram
@@ -127,7 +114,7 @@ const Home=()=>{
                     </a>
                 </div>
                 <ul className="text-black text-lg list-disc marker:text-[#61CE70] marker:text-2xl pl-8">
-                    {previousOrganizersList()}
+                    <PreviousOrganizersList/>
                 </ul>
             </div>
         </div>
