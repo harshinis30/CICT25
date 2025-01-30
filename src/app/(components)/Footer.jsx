@@ -14,13 +14,13 @@ const Footer = () => {
                             Conference on Information Communication Technology 2025 {"(CICT-2025)"}
                         </p>
                         <div className="flex items-start lg:items-center gap-4">
-                            
+
                             <p className="text-[15px] lg:text-sm">
                                 Indian Institute of Information Technology, Design and Manufacturing, Kancheepuram,
                                 Chennai, Tamil Nadu, India-600127
                             </p>
                         </div>
-                        <Button className="mt-4 w-3/5 h-12 bg-orange-400 rounded-full text-black text-md font-semibold">
+                        <Button className="mt-4 w-3/5 h-12 bg-orange-400 rounded-full text-black text-md font-semibold transition-transform hover:scale-105 ease-in-out transition-duration-300">
                             Contact Us
                         </Button>
                     </div>
@@ -29,17 +29,17 @@ const Footer = () => {
                     <div className="flex flex-col justify-start items-start lg:w-1/3 w-auto lg:pl-14 xl:pl-32 text-center lg:text-left">
                         <h1 className="font-semibold text-xl mb-4">Organizers</h1>
                         {[
-                            'IIITDM Kancheepuram',
-                            'IIIT Allahabad',
-                            'ABV-IIITM Gwalior',
-                            'PDPM IIITDM Jabalpur',
-                            'IIITDM Kurnool',
+                            ['IIITDM Kancheepuram', "https://www.iiitdm.ac.in"],
+                            ['IIIT Allahabad', "https://www.iiita.ac.in"],
+                            ['ABV-IIITM Gwalior', "https://www.iiitm.ac.in"],
+                            ['PDPM IIITDM Jabalpur', "https://www.iiitdmj.ac.in"],
+                            ['IIITDM Kurnool', "https://www.iiitk.ac.in"],
                         ].map((org, index) => (
                             <Link
                                 key={index}
-                                href="https://www.iiitdm.ac.in"
+                                href={org[1]}
                                 target="_blank"
-                                className="flex items-center mb-2"
+                                className="flex items-center mb-2 hover:text-green-500 hover:text-opacity-60 transition-colors duration-300 ease-in-out"
                             >
                                 <svg
                                     className="w-5 h-5 text-white mr-2"
@@ -56,7 +56,9 @@ const Footer = () => {
                                         d="m9 5 7 7-7 7"
                                     />
                                 </svg>
-                                {org}
+                                <p className=''>
+                                    {org[0]}
+                                </p>
                             </Link>
                         ))}
                     </div>
@@ -65,17 +67,17 @@ const Footer = () => {
                     <div className="flex flex-col items-center justify-start lg:items-start lg:w-1/3 w-full lg:pl-10 xl:pl-20 text-center lg:text-left">
                         <h1 className="font-semibold text-xl mb-4">ieeeXplore Links</h1>
                         {[
-                            'IIITDM Allahabad: CICT 2024',
-                            'IIITDM Jabalpur: CICT 2023',
-                            'ABV-IIITM Gwalior: CICT 2022',
-                            'IIITDM Kurnool: CICT 2021',
-                            'IIIT Kancheepuram: CICT 2020',
-                            'IIIT Allahabad: CICT 2019',
-                            'IIITDM Jabalpur: CICT 2018',
-                            'ABV-IIITM Gwalior: CICT 2017',
+                            ['IIIT Allahabad: CICT 2024', "#"],
+                            ['IIITDM Jabalpur: CICT 2023', "#"],
+                            ['ABV-IIITM Gwalior: CICT 2022', "#"],
+                            ['IIITDM Kurnool: CICT 2021', "#"],
+                            ['IIITDM Kancheepuram: CICT 2020', "#"],
+                            ['IIIT Allahabad: CICT 2019', "#"],
+                            ['IIITDM Jabalpur: CICT 2018', "#"],
+                            ['ABV-IIITM Gwalior: CICT 2017', "#"],
                         ].map((link, index) => (
-                            <Link key={index} href="#" target="_blank" className="mb-2">
-                                {link}
+                            <Link key={index} href={link[1]} target="_blank" className="mb-2 hover:text-green-500 hover:text-opacity-60 transition-colors duration-300 ease-in-out">
+                                {link[0]}
                             </Link>
                         ))}
                     </div>
