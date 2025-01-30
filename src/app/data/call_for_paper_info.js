@@ -1,5 +1,6 @@
 export const regularTrack = [
     "Cloud and Big Data Management",
+    "Computational Intelligence & Machine Learning",
     "Computer and Software Systems",
     "Cyber-Physical Systems",
     "Explainable and Interpretable AI",
@@ -14,7 +15,6 @@ export const regularTrack = [
     "Robotics and Autonomous Vehicles",
     "Semantic Communication",
     "Speech, Biomedical, RADAR Signal Processing",
-    "Computational Intelligence & Machine Learning",
     "Wireless Communication Technologies"
   ];
 
