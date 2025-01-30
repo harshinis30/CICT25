@@ -8,7 +8,7 @@ import FAQSection from "@/app/(components)/Faq";
 
 const Page = () => {
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center gap-6 px-6">
+    <div className="min-h-screen bg-white flex flex-col items-center gap-6 p-6">
       <div className="text-5xl text-blue-800 font-bold mt-20 text-center">
         Registration for IEEE CICT-2025 will be open soon ...
       </div>
@@ -254,10 +254,10 @@ const Page = () => {
           <li>
             <strong>Email:</strong>{" "}
             <a
-              href="mailto:cict25.iiitdm.ac.in"
+              href="mailto:cict.iiitdm.ac.in"
               className="text-red-600 underline"
             >
-              cict25.iiitdm.ac.in
+              cict.iiitdm.ac.in
             </a>
           </li>
         </ul>

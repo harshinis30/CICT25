@@ -150,37 +150,46 @@ export default function Component() {
               >
                 {items.map((item) => (
                   <div key={item.title}>
-                    <div
-                      className="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 p-1 z-10"
-                      onClick={() => {
-                        if (item.subItems) {
+                    {item.subItems ? (
+                      <div
+                        className="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 p-1"
+                        onClick={() => {
                           setExpandedSubItem((prev) =>
                             prev === item.title ? null : item.title
                           );
-                        }
-                      }}
-                    >
+                        }}
+                      >
+                        <Link
+                          href={item.href || "#"}
+                          className="block w-full px-4 py-2 text-sm text-gray-600"
+                        >
+                          <div className="flex items-center justify-between">
+                            <span>{item.title}</span>
+                            <ChevronDownIcon
+                              className={`h-4 w-4 transition-transform ${
+                                expandedSubItem === item.title
+                                  ? "rotate-180"
+                                  : ""
+                              }`}
+                            />
+                          </div>
+                        </Link>
+                      </div>
+                    ) : (
                       <Link
                         href={item.href || "#"}
-                        className="block px-4 py-2 text-sm text-gray-600 z-10"
+                        className="block w-full hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 px-4 py-2 text-sm text-gray-600"
                       >
                         {item.title}
                       </Link>
-                      {item.subItems && (
-                        <ChevronDownIcon
-                          className={`h-4 w-4 transition-transform z-10${
-                            expandedSubItem === item.title ? "rotate-180" : ""
-                          }`}
-                        />
-                      )}
-                    </div>
+                    )}
                     {item.subItems && expandedSubItem === item.title && (
                       <div className="pl-4">
                         {item.subItems.map((subItem) => (
                           <Link
                             key={subItem.title}
                             href={subItem.href || "#"}
-                            className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200 z-10"
+                            className="block w-full px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
                           >
                             {subItem.title}
                           </Link>
