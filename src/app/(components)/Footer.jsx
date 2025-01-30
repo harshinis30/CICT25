@@ -65,7 +65,7 @@ const Footer = () => {
                     <div className="flex flex-col items-center justify-start lg:items-start lg:w-1/3 w-full lg:pl-10 xl:pl-20 text-center lg:text-left">
                         <h1 className="font-semibold text-xl mb-4">ieeeXplore Links</h1>
                         {[
-                            'IIITDM Allahabad: CICT 2024',
+                            'IIIT Allahabad: CICT 2024',
                             'IIITDM Jabalpur: CICT 2023',
                             'ABV-IIITM Gwalior: CICT 2022',
                             'IIITDM Kurnool: CICT 2021',

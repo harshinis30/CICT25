@@ -10,10 +10,35 @@
     }
 }
 
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-2px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
 .pop:hover{
     animation-name: pop_animation;
     animation-duration: 0.2s;
     animation-timing-function: linear;
+}
+
+.shake:hover{
+    animation-name: shake;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;   
 }
 
 .slight-tilt:hover{
