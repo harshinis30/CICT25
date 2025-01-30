@@ -3,37 +3,27 @@
 import React from "react";
 import './home.css';
 import InfoCards from "./InfoCards";
-import { homeAboutCICT } from "../data/homeAboutCICT";
 import { homeUsefulButtons } from "../data/homeUsefulButtons"
 import OrganizerCards from "./OrganizerCards";
-
-const previousOrganizersList=()=>{
-    const organizerList=homeAboutCICT.previousOrganizers.map((organizers,index)=>{
-        return(
-            <li key={index}>
-                <a href={organizers.link} target="_blank">{organizers.name}</a>
-            </li>
-        )
-    });
-    return(
-        <>
-            {organizerList}
-        </>
-    )
-}
+import PreviousOrganizersList from "./PreviousOrganizerList";
+import CountDown from "../(components)/CountDown";
 
 const buttonList=()=>{
     const buttons=homeUsefulButtons.map((button,index)=>{
         return(
-            <button 
+            <a
+                href={button.link}
                 key={index}
-                className="
-                    bg-[#61CE70] text-black font-bold rounded-full mx-4 px-8 py-4 md:mr-8 my-5 text-center
-                    hover:bg-[#279E64] hover:text-white duration-200
-                "
             >
-                {button.name}
-            </button>
+                <button
+                    className="
+                        bg-[#61CE70] text-black font-bold rounded-full mx-4 px-8 py-4 md:mr-8 my-5 text-center
+                        hover:bg-[#279E64] hover:text-white duration-200
+                    "
+                >
+                    {button.name}
+                </button>
+            </a>
         )
     })
     return(
@@ -47,9 +37,10 @@ const Home=()=>{
     return(
     <>
     <div className="md:flex bg-[#E6F7FF] w-full h-fit px-4 py-10 md:p-0">
-        <div className="flex flex-col w-fit bg-[#E6F7FF] py-8 mx-8 md:w-1/2 md:mx-20 md:my-24">
-            <div className="flex flex-col md:flex-row md:items-center gap-5">
-                <img className="w-2/6 md:w-1/6 slight-tilt duration-500" src="/temp/iiitdm_logo.webp"/>
+        <div className="flex flex-col w-fit bg-[#E6F7FF] py-8 mx-8 md:w-1/2 md:mx-20">
+            <CountDown targetDate="2025-12-18T23:59:59"/>
+            <div className="flex flex-col md:flex-row md:items-center gap-5 md:mt-24">
+                <img className="w-2/6 md:w-1/6 slight-tilt duration-500" src="/logos/iiitdm_logo.png"/>
                 <div className="text-2xl font-bold">
                     Indian Institute of Information Technology, Design and Manufacturing, Kancheepuram
                 </div>
@@ -60,25 +51,29 @@ const Home=()=>{
             {/* <button className="bg-[#0800F4] w-fit px-8 py-4 text-white font-bold rounded-md my-4">
                 CERTIFICATES
             </button> */}
-            <div className="text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas officia, nisi optio debitis odit fugit nobis architecto sapiente fugiat. Sint possimus veniam nemo placeat accusamus repellendus! Voluptates nisi consectetur laboriosam, officia soluta deleniti. Vero earum voluptatum aperiam illum corporis cumque a nisi dicta! Rerum officia minus mollitia? Doloribus aliquid iusto, voluptate, labore ea libero, quidem sed pariatur dolores perspiciatis sequi amet ratione minus quasi illum. Quas consequatur unde, eum tempora praesentium veritatis voluptatum est. Unde, nisi perspiciatis eum eius consectetur dicta quas, fugiat aut provident perferendis culpa facere temporibus veritatis aliquid? Dignissimos ab quas, deserunt minus minima quasi incidunt esse laborum magni iste possimus fugit voluptatibus perferendis eaque mollitia? Optio harum reiciendis adipisci libero, sequi dolores deleniti animi, quo, magnam neque ea corporis facilis mollitia veritatis! Labore distinctio, eius dolor provident, natus quisquam dicta veritatis assumenda, quia minus maxime! Quasi, nesciunt. Adipisci deserunt sint vitae aut iure nulla quos nihil vero. Nemo quod magnam deserunt unde doloremque et necessitatibus. Nam vero tempora eveniet dignissimos est laborum quaerat at tenetur vel repudiandae, placeat quod minus iusto blanditiis consectetur voluptatibus facilis, ut officiis excepturi, incidunt adipisci? Amet repudiandae earum, veniam ipsam dolorem accusamus atque quibusdam in harum animi dignissimos, cumque dolor a fugit nemo ad et quidem possimus ab unde veritatis asperiores sed quos facere! Soluta, quae tempore odio, exercitationem, itaque odit doloribus quam similique quis ad vel? Placeat, ipsam quasi inventore delectus deleniti id fuga error at aliquid dicta sequi odit dolorum esse consectetur voluptatibus expedita consequatur recusandae quam hic provident alias necessitatibus assumenda. Velit, ipsum. Mollitia repellendus suscipit, inventore perferendis cum consequuntur ab excepturi incidunt voluptatibus! Nobis quod rem voluptatem cum eligendi at quam enim porro dolor atque impedit sint, vero reiciendis expedita est nulla quas sunt fugiat quasi libero officia consequatur. Sit nemo magni, ut culpa dolore, veritatis enim officiis necessitatibus fugit consequuntur officia aspernatur ea, dolorem expedita maxime sunt deleniti nostrum! Dolores molestias unde eum fuga reiciendis. Dignissimos expedita magnam quidem omnis eum facilis, explicabo, ipsam officiis aliquid culpa ratione! Soluta, architecto? Quidem corrupti dolor corporis. Neque, quo excepturi magnam nostrum perferendis, sunt animi sint consequatur rerum possimus mollitia. Vel totam corrupti impedit exercitationem quam officiis suscipit ab natus! Ipsum sapiente molestias possimus eligendi soluta eveniet, qui, quisquam cumque nulla doloremque in sint dolorem modi laudantium pariatur nihil obcaecati consequatur ducimus alias mollitia sed odio distinctio. Aliquid ratione odio quisquam, quae blanditiis adipisci architecto tenetur deserunt voluptate sint.
+            <div className="text-lg">
+                The 8th edition of the Annual IEEE International Conference on Information Communication Technology (CICT) jointly organized by all CFIIITs.
             </div>
             <div className="flex flex-col md:flex-row">
-                <button className="
-                    bg-[#279E64] text-white font-bold rounded-full px-8 py-4 border-solid border-2 border-[#279E64] md:mr-8 my-5 text-center
-                    hover:bg-transparent hover:text-[#279E64] duration-200 pop
-                ">
-                    CALL FOR PAPER
-                </button>
-                <button className="
-                    bg-transparent text-[#13287D] font-bold rounded-full px-8 py-4 border-solid border-2 border-[#13287D] my-5 text-center
-                    hover:bg-[#13287D] hover:text-white duration-200 pop
-                ">
-                    CALL FOR SYNOPSIS
-                </button>
+                <a href="/calls/papers">
+                    <button className="
+                        bg-[#279E64] text-white font-bold rounded-full px-8 py-4 border-solid border-2 border-[#279E64] md:mr-8 my-5 text-center
+                        hover:bg-transparent hover:text-[#279E64] duration-200 pop
+                        ">
+                        CALL FOR PAPER
+                    </button>
+                </a>
+                <a href="/calls/synopsis">
+                    <button className="
+                        bg-transparent text-[#13287D] font-bold rounded-full px-8 py-4 border-solid border-2 border-[#13287D] my-5 text-center
+                        hover:bg-[#13287D] hover:text-white duration-200 pop
+                        ">
+                        CALL FOR SYNOPSIS
+                    </button>
+                </a>
             </div>
         </div>
-        <img className="md:w-1/2 w-full" src='/temp/some.jpg'/>
+        <img className="md:w-1/2 w-full" src='/home_img/institute.jpg'/>
     </div>
 
     <div className="pb-24 bg-[#13287D]">
@@ -87,7 +82,7 @@ const Home=()=>{
     
     <div className="mx-5 my-20">
         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-20">
-            <img className="rounded-lg" src='/temp/some.jpg'/>
+            <img className="rounded-lg" src='/temp/some.jpg' alt="Brochure"/>
             <div className="flex flex-col gap-5">
                 <span className="text-[#279E64] font-bold text-xl">
                     About CICT 2025
@@ -95,9 +90,18 @@ const Home=()=>{
                 <span className="text-[#13287D] font-extrabold text-3xl">
                     IEEE CICT 2025 IIITDM Kancheepuram
                 </span>
-                <p className="text-xl text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A nobis adipisci unde, quasi officiis explicabo. Debitis, animi impedit accusantium beatae veniam fuga dolor ratione quis! Obcaecati explicabo consequuntur quam nesciunt, culpa officiis delectus expedita perspiciatis deserunt excepturi quis dolore ipsam.
-                </p>
+                <div className="text-xl text-gray-500">
+                    The International Conference on Information and Communication Technology (CICT) is an annual event organized by five Indian Institutes of Information Technology (IIITs), namely:
+                    <ul className="list-disc ml-24">
+                        <li>IIITDM Kancheepuram</li>
+                        <li>IIIT Allahabad</li>
+                        <li>PDPM-IIITDM Jabalpur</li>
+                        <li>IIITDM Kurnool</li>
+                        <li>Atal Bihari Vajpayee Indian Institute of Information Technology and Management (ABV-IIITM) Gwalior</li>
+                    </ul>
+                    All these institutes are fully funded by the Government of India, and the conference venue rotates among them in a round-robin fashion.
+                    Since its inception, CICT has been technically and financially co-sponsored by IEEE, with all past eight editions having their proceedings available on IEEE Xplore. Additionally, prestigious government organizations like DST, ISRO, DRDO, CSIR, and several private companies have provided financial support, further strengthening the conference’s impact and outreach in the field of Information and Communication Technology (ICT).
+                </div>
                 <div className="text-[#13287D] font-bold">
                     Previous Edition of CICT:
                     <a href="https://ieeexplore.ieee.org/xpl/conhome/1823245/all-proceedings" target="_blank">
@@ -110,7 +114,7 @@ const Home=()=>{
                     </a>
                 </div>
                 <ul className="text-black text-lg list-disc marker:text-[#61CE70] marker:text-2xl pl-8">
-                    {previousOrganizersList()}
+                    <PreviousOrganizersList/>
                 </ul>
             </div>
         </div>
@@ -118,7 +122,7 @@ const Home=()=>{
     </div>
 
     <div className="flex flex-col items-center bg-[#279E64] rounded-xl pb-40">
-        <img className="w-2/6 md:w-1/12 slight-tilt duration-500" src="/logos/iiitdm_white.png"/>
+        <img className="w-2/6 md:w-1/12 mb-5 mt-16 slight-tilt duration-500" src="/logos/iiitdm_white.png"/>
         <div className="text-center text-white text-3xl font-bold">
             Organizing Institutes<br/>
             CICT 2025
@@ -140,8 +144,8 @@ const Home=()=>{
     </div>
     <div className="flex justify-center">
         <div className="max-w-[70rem] relative -top-28 mt-10 mx-10 grid grid-cols-2 md:grid-cols-3 rounded-xl overflow-hidden bg-white">
-            <div className="flex pt-5 pb-14 px-20 bg-yellow-400 justify-center col-span-2 md:col-span-1">
-                <img className="w-32 aspect-square" src="temp/some.jpg"/>
+            <div className="flex py-5 px-20 bg-yellow-500 justify-center col-span-2 md:col-span-1">
+                <img className="w-32 aspect-square" src="/logos/iiitdm.png"/>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center border-solid border-r-[1px] pt-5 pb-10 px-10 gap-2">
                 <div className="text-5xl text-[#279E64] pr-2 shake">

@@ -4,9 +4,9 @@ import { homeInfoCard } from "../data/homeInfoCard";
 function InfoCards(){
     const cards=homeInfoCard.map((info,index)=>{
         return(
-            <div className="mt-10 mx-5 w-80" key={index}>
-                <img className="bg-white w-28 aspect-square relative -bottom-10 left-10 rounded-xl overflow-hidden hover:scale-110 duration-200" src={info.img}/>
-                <div className="border-solid rounded-sm border-2 border-[#EFEFEF2B] w-fit box-border pt-10 px-10 pb-5 text-white">
+            <div className="mt-20 mx-5 w-80 border-solid flex flex-col items-center rounded-sm border-2 border-[#EFEFEF2B]" key={index}>
+                <img className="bg-white p-5 w-28 aspect-square relative self-start -top-10 left-10 -mb-10 rounded-xl overflow-hidden hover:scale-110 duration-200" src={info.img}/>
+                <div className="w-fit box-border px-10 pb-5 text-white">
                     <div className="text-2xl font-extrabold my-5">
                         {info.title}
                     </div>
