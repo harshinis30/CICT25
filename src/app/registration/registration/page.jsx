@@ -254,10 +254,10 @@ const Page = () => {
           <li>
             <strong>Email:</strong>{" "}
             <a
-              href="mailto:cict.iiitdm.ac.in"
+              href="mailto:cict@iiitdm.ac.in"
               className="text-red-600 underline"
             >
-              cict.iiitdm.ac.in
+              cict@iiitdm.ac.in
             </a>
           </li>
         </ul>

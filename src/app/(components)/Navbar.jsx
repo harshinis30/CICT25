@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { navItems } from "../data/navItems";
+import Image from "next/image";
 
 export default function Component() {
   const [expandedCategory, setExpandedCategory] = useState(null);
@@ -35,8 +36,24 @@ export default function Component() {
           >
             {/* Logo Inside Sheet */}
             <div className="flex items-center justify-center mb-6">
-              <MountainIcon className="h-8 w-8" />
-              <span className="ml-2 text-xl font-bold">Your Logo</span>
+              <a
+                href="/"
+                className="flex flex-row items-center gap-3 hover:opacity-90 transition-opacity"
+              >
+                <Image
+                  src="/logos/image.png"
+                  alt="IIITDM Logo"
+                  width={48}
+                  height={48}
+                  quality={100}
+                  priority
+                  className="h-12 w-12 object-contain"
+                />
+                <div className="flex flex-col -space-y-1">
+                  <p className="text-xl font-bold text-blue-600">CICT</p>
+                  <p className="text-lg font-bold text-gray-900">2025</p>
+                </div>
+              </a>
             </div>
 
             {/* Navigation Items */}
@@ -122,13 +139,45 @@ export default function Component() {
         </Sheet>
 
         {/* Logo Beside Burger Icon */}
-        <MountainIcon className="h-8 w-8 z-10" />
+        <a
+          href="/"
+          className="flex flex-row items-center gap-3 hover:opacity-90 transition-opacity"
+        >
+          <Image
+            src="/logos/image.png"
+            alt="IIITDM Logo"
+            width={48}
+            height={48}
+            quality={100}
+            priority
+            className="h-12 w-12 object-contain"
+          />
+          <div className="flex flex-col -space-y-1">
+            <p className="text-xl font-bold text-blue-600">CICT</p>
+            <p className="text-lg font-bold text-gray-900">2025</p>
+          </div>
+        </a>
       </div>
 
       {/* Desktop Navigation */}
       <nav className="mx-auto text-lg hidden lg:flex gap-6 z-10">
-        <a href="/">
-          <MountainIcon className="h-8 w-8 hover:cursor-pointer z-10" />
+        <a
+          href="/"
+          className="flex flex-row items-center gap-3 hover:opacity-90 transition-opacity"
+        >
+          <Image
+            src="/logos/image.png"
+            alt="IIITDM Logo"
+            width={48}
+            height={48}
+            quality={100}
+            priority
+            className="h-12 w-12 object-contain"
+          />
+          <div className="flex flex-col -space-y-1">
+            <p className="text-xl font-bold text-blue-600">CICT</p>
+            <p className="text-lg font-bold text-gray-900">2025</p>
+          </div>
         </a>
         {Object.entries(navItems).map(([category, items]) => (
           <div
