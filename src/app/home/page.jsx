@@ -37,7 +37,7 @@ const buttonList=()=>{
         )
     })
     return(
-        <div className="flex flex-col md:flex-row justify-center items-center mt-28">
+        <div className="flex flex-col flex-wrap md:flex-row justify-center items-center mt-28">
             {buttons}
         </div>
     )
@@ -117,7 +117,7 @@ const Home=()=>{
         {buttonList()}
     </div>
 
-    <div className="flex flex-col items-center bg-[#279E64] rounded-xl">
+    <div className="flex flex-col items-center bg-[#279E64] rounded-xl pb-40">
         <img className="w-2/6 md:w-1/12 slight-tilt duration-500" src="/logos/iiitdm_white.png"/>
         <div className="text-center text-white text-3xl font-bold">
             Organizing Institutes<br/>
@@ -126,7 +126,42 @@ const Home=()=>{
         <div className="text-center text-white text-xl font-bold mt-10 mb-2">
             Organizers & Co-Organizers
         </div>
-            <OrganizerCards/>
+    </div>
+    <OrganizerCards/>
+    <div>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4083.458581912919!2d80.13489620547216!3d12.839539742543696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525851fbcd3b6b%3A0x9f1067aa71e3898e!2sIndian%20Institute%20of%20Information%20Technology%2C%20Design%20and%20Manufacturing%2C%20Kancheepuram!5e0!3m2!1sen!2sin!4v1738208729609!5m2!1sen!2sin" 
+            className="w-full h-96 border-0"
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+    </div>
+    <div className="flex justify-center">
+        <div className="max-w-[70rem] relative -top-28 mt-10 mx-10 grid grid-cols-2 md:grid-cols-3 rounded-xl overflow-hidden bg-white">
+            <div className="flex pt-5 pb-14 px-20 bg-yellow-400 justify-center col-span-2 md:col-span-1">
+                <img className="w-32 aspect-square" src="temp/some.jpg"/>
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-center border-solid border-r-[1px] pt-5 pb-10 px-10 gap-2">
+                <div className="text-5xl text-[#279E64] pr-2 shake">
+                    &#9993;
+                </div>
+                <div className="text-sm flex flex-col gap-2">
+                    <p>Main Email: cict@iiitdm.ac.in</p>
+                    <p>Inquiries: cict@iiitdm.ac.in</p>
+                </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-center border-solid border-l-[1px] pt-5 pb-10 px-10 gap-2">
+                <div className="text-5xl text-[#279E64] shake pr-2">
+                    &#9743;
+                </div>
+                <div className="text-sm flex flex-col gap-2">
+                    <p>Office Telephone: </p>
+                    <p>Mobile: </p>
+                </div>
+            </div>
+        </div>
     </div>
     </>
     )
