@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { navItems } from "../data/navItems";
 import Image from "next/image";
@@ -17,6 +17,70 @@ export default function Component() {
   const [expandedCategory, setExpandedCategory] = useState(null);
   const [expandedSubItem, setExpandedSubItem] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [hoverTimeout, setHoverTimeout] = useState(null);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setExpandedCategory(null);
+        setExpandedSubItem(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Handle hover with delay
+  const [expandedCategoryDesktop, setExpandedCategoryDesktop] = useState(null);
+  const [expandedSubItemDesktop, setExpandedSubItemDesktop] = useState(null);
+  const dropdownRefDesktop = useRef(null);
+
+  // Adjust dropdown position to prevent overflow
+  const adjustDropdownPosition = (dropdown) => {
+    if (!dropdown) return;
+
+    const rect = dropdown.getBoundingClientRect();
+    const overflowRight = rect.right > window.innerWidth;
+    const overflowLeft = rect.left < 0;
+
+    if (overflowRight) {
+      dropdown.style.left = `-${rect.right - window.innerWidth + 16}px`;
+    } else if (overflowLeft) {
+      dropdown.style.left = `${-rect.left + 16}px`;
+    }
+  };
+
+  // Handle dropdown position on category expand
+  useEffect(() => {
+    if (expandedCategoryDesktop && dropdownRefDesktop.current) {
+      adjustDropdownPosition(dropdownRefDesktop.current);
+    }
+  }, [expandedCategoryDesktop]);
+
+  // // Adjust dropdown position to prevent overflow
+  // const adjustDropdownPosition = (dropdown) => {
+  //   if (!dropdown) return;
+
+  //   const rect = dropdown.getBoundingClientRect();
+  //   const overflowRight = rect.right > window.innerWidth;
+  //   const overflowLeft = rect.left < 0;
+
+  //   if (overflowRight) {
+  //     dropdown.style.left = `-${rect.right - window.innerWidth + 16}px`;
+  //   } else if (overflowLeft) {
+  //     dropdown.style.left = `${-rect.left + 16}px`;
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   if (expandedCategory && dropdownRef.current) {
+  //     adjustDropdownPosition(dropdownRef.current);
+  //   }
+  // }, [expandedCategory]);
 
   return (
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 z-10">
@@ -160,7 +224,11 @@ export default function Component() {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="mx-auto text-lg hidden lg:flex gap-6 z-10">
+      <div
+        className="hidden lg:flex items-center justify-between w-full p-4"
+        onMouseLeave={() => setExpandedCategoryDesktop(null)}
+      >
+        {/* Logo */}
         <a
           href="/"
           className="flex flex-row items-center gap-3 hover:opacity-90 transition-opacity"
@@ -179,79 +247,88 @@ export default function Component() {
             <p className="text-lg font-bold text-gray-900">2025</p>
           </div>
         </a>
-        {Object.entries(navItems).map(([category, items]) => (
-          <div
-            key={category}
-            className="relative group z-10"
-            onMouseEnter={() => setExpandedCategory(category)}
-          >
-            <Button
-              variant="ghost"
-              className="text-base font-medium text-gray-700 hover:text-blue-600 border-t-4 border-transparent hover:border-blue-500 z-10"
+
+        {/* Navigation Items */}
+        <nav className="flex gap-6">
+          {Object.entries(navItems).map(([category, items]) => (
+            <div
+              key={category}
+              className="relative group"
+              onMouseEnter={() => setExpandedCategoryDesktop(category)}
             >
-              {category} <ChevronDownIcon className="h-4 w-4 ml-1 z-10" />
-            </Button>
-            {expandedCategory === category && (
-              <div
-                className="absolute bg-white shadow-lg rounded-lg p-2 space-y-2 min-w-[200px] mt-1 transition-opacity duration-300 z-10"
-                onMouseEnter={() => setExpandedCategory(category)}
-                onMouseLeave={() => setExpandedCategory(null)}
+              <Button
+                variant="ghost"
+                className="text-base font-medium text-gray-700 hover:text-blue-600 border-t-4 border-transparent hover:border-blue-500"
               >
-                {items.map((item) => (
-                  <div key={item.title}>
-                    {item.subItems ? (
-                      <div
-                        className="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 p-1"
-                        onClick={() => {
-                          setExpandedSubItem((prev) =>
-                            prev === item.title ? null : item.title
-                          );
-                        }}
-                      >
+                {category} <ChevronDownIcon className="h-4 w-4 ml-1" />
+              </Button>
+
+              {expandedCategoryDesktop === category && (
+                <div
+                  ref={dropdownRefDesktop}
+                  className="absolute bg-white shadow-lg rounded-lg p-2 space-y-2 min-w-[200px] mt-1 transition-opacity duration-300 z-50 p-3"
+                  onClick={() => setExpandedCategoryDesktop(null)}
+                >
+                  {items.map((item) => (
+                    <div key={item.title}>
+                      {item.subItems ? (
+                        <div className="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 p-1">
+                          <Link
+                            href={item.href || "#"}
+                            className="block w-full px-4 py-2 text-sm text-gray-600"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setExpandedCategoryDesktop(null);
+                              setExpandedSubItemDesktop(null);
+                            }}
+                          >
+                            <div className="flex items-center justify-between">
+                              <span>{item.title}</span>
+                              <ChevronDownIcon
+                                className={`h-4 w-4 transition-transform ${
+                                  expandedSubItemDesktop === item.title
+                                    ? "rotate-180"
+                                    : ""
+                                }`}
+                              />
+                            </div>
+                          </Link>
+                        </div>
+                      ) : (
                         <Link
                           href={item.href || "#"}
-                          className="block w-full px-4 py-2 text-sm text-gray-600"
+                          className="block w-full hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 px-4 py-2 text-sm text-gray-600"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setExpandedCategoryDesktop(null);
+                          }}
                         >
-                          <div className="flex items-center justify-between">
-                            <span>{item.title}</span>
-                            <ChevronDownIcon
-                              className={`h-4 w-4 transition-transform ${
-                                expandedSubItem === item.title
-                                  ? "rotate-180"
-                                  : ""
-                              }`}
-                            />
-                          </div>
+                          {item.title}
                         </Link>
-                      </div>
-                    ) : (
-                      <Link
-                        href={item.href || "#"}
-                        className="block w-full hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 px-4 py-2 text-sm text-gray-600"
-                      >
-                        {item.title}
-                      </Link>
-                    )}
-                    {item.subItems && expandedSubItem === item.title && (
-                      <div className="pl-4">
-                        {item.subItems.map((subItem) => (
-                          <Link
-                            key={subItem.title}
-                            href={subItem.href || "#"}
-                            className="block w-full px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-                          >
-                            {subItem.title}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-      </nav>
+                      )}
+
+                      {item.subItems &&
+                        expandedSubItemDesktop === item.title && (
+                          <div className="pl-4">
+                            {item.subItems.map((subItem) => (
+                              <Link
+                                key={subItem.title}
+                                href={subItem.href || "#"}
+                                className="block w-full px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+                              >
+                                {subItem.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 }
