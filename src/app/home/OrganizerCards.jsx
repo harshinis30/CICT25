@@ -9,7 +9,7 @@ function OrganizerCards(){
                 key={index}
             >
                 <div 
-                    className="flex justify-center items-center bg-gray-200 box-content aspect-square"
+                    className="flex justify-center items-center bg-gray-200 box-content aspect-square p-2"
                 >
                     <img className="w-fit" src={college.logo}/>
                 </div>

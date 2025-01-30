@@ -1,6 +1,6 @@
 export const homeOrganizerInfo=[
     {
-        logo:'/temp/iiitdm_logo.webp',
+        logo:'/logos/iiitdm_logo.png',
         name:'IIITDM Kancheepuram',
         title:'Organizer',
         links:{
@@ -8,7 +8,7 @@ export const homeOrganizerInfo=[
         }
     },
     {
-        logo:'/temp/some.jpg',
+        logo:'/logos/iiitdm_kurnool.png',
         name:'IIITDM Kurnool',
         title:'Co-Organizer',
         links:{
@@ -16,7 +16,7 @@ export const homeOrganizerInfo=[
         }
     },
     {
-        logo:'/temp/some.jpg',
+        logo:'/logos/iiit_allahabad.png',
         name:'IIIT Allahabad',
         title:'Co-Organizer',
         links:{
@@ -24,7 +24,7 @@ export const homeOrganizerInfo=[
         }
     },
     {
-        logo:'/temp/some.jpg',
+        logo:'/logos/iiitm_gwalior.png',
         name:'ABV-IIITM Gwalior',
         title:'Co-Organizer',
         links:{
@@ -32,7 +32,7 @@ export const homeOrganizerInfo=[
         }
     },
     {
-        logo:'/temp/some.jpg',
+        logo:'/logos/iiitdm_jabalpur.jpg',
         name:'IIITDM Jabalpur',
         title:'Co-Organizer',
         links:{
