@@ -17,24 +17,8 @@ export default function Component() {
   const [expandedCategory, setExpandedCategory] = useState(null);
   const [expandedSubItem, setExpandedSubItem] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [hoverTimeout, setHoverTimeout] = useState(null);
   const dropdownRef = useRef(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setExpandedCategory(null);
-        setExpandedSubItem(null);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  // Handle hover with delay
   const [expandedCategoryDesktop, setExpandedCategoryDesktop] = useState(null);
   const [expandedSubItemDesktop, setExpandedSubItemDesktop] = useState(null);
   const dropdownRefDesktop = useRef(null);
@@ -54,33 +38,25 @@ export default function Component() {
     }
   };
 
-  // Handle dropdown position on category expand
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setExpandedCategory(null);
+        setExpandedSubItem(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   useEffect(() => {
     if (expandedCategoryDesktop && dropdownRefDesktop.current) {
       adjustDropdownPosition(dropdownRefDesktop.current);
     }
   }, [expandedCategoryDesktop]);
-
-  // // Adjust dropdown position to prevent overflow
-  // const adjustDropdownPosition = (dropdown) => {
-  //   if (!dropdown) return;
-
-  //   const rect = dropdown.getBoundingClientRect();
-  //   const overflowRight = rect.right > window.innerWidth;
-  //   const overflowLeft = rect.left < 0;
-
-  //   if (overflowRight) {
-  //     dropdown.style.left = `-${rect.right - window.innerWidth + 16}px`;
-  //   } else if (overflowLeft) {
-  //     dropdown.style.left = `${-rect.left + 16}px`;
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (expandedCategory && dropdownRef.current) {
-  //     adjustDropdownPosition(dropdownRef.current);
-  //   }
-  // }, [expandedCategory]);
 
   return (
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 z-10">
@@ -161,7 +137,7 @@ export default function Component() {
                                 href={item.href || "#"}
                                 className="flex w-full items-center py-2 text-base"
                                 prefetch={false}
-                                onClick={() => setIsOpen(false)} // Close menu on click
+                                onClick={() => setIsOpen(false)}
                               >
                                 {item.title}
                               </Link>
@@ -172,6 +148,12 @@ export default function Component() {
                                       ? "rotate-180"
                                       : ""
                                   }`}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setExpandedSubItem((prev) =>
+                                      prev === item.title ? null : item.title
+                                    );
+                                  }}
                                 />
                               )}
                             </div>
@@ -184,7 +166,7 @@ export default function Component() {
                                       href={subItem.href || "#"}
                                       className="flex w-full items-center py-2 text-base"
                                       prefetch={false}
-                                      onClick={() => setIsOpen(false)} // Close menu on click
+                                      onClick={() => setIsOpen(false)}
                                     >
                                       {subItem.title}
                                     </Link>
@@ -226,7 +208,10 @@ export default function Component() {
       {/* Desktop Navigation */}
       <div
         className="hidden lg:flex items-center justify-between w-full p-4"
-        onMouseLeave={() => setExpandedCategoryDesktop(null)}
+        onMouseLeave={() => {
+          setExpandedCategoryDesktop(null);
+          setExpandedSubItemDesktop(null);
+        }}
       >
         {/* Logo */}
         <a
@@ -250,88 +235,85 @@ export default function Component() {
 
         {/* Navigation Items */}
         <nav className="flex gap-6">
-          {Object.entries(navItems).map(([category, items]) => (
-            <div
-              key={category}
-              className="relative group"
-              onMouseEnter={() => setExpandedCategoryDesktop(category)}
-            >
-              <Button
-                variant="ghost"
-                className="text-base font-medium text-gray-700 hover:text-blue-600 border-t-4 border-transparent hover:border-blue-500"
-              >
-                {category} <ChevronDownIcon className="h-4 w-4 ml-1" />
-              </Button>
+  {Object.entries(navItems).map(([category, items]) => (
+    <div
+      key={category}
+      className="relative group"
+      onMouseEnter={() => {
+        setExpandedCategoryDesktop(category);
+        setExpandedSubItemDesktop(null);
+      }}
+    >
+      <Button
+        variant="ghost"
+        className="text-base font-medium text-gray-700 hover:text-blue-600 border-t-4 border-transparent hover:border-blue-500"
+      >
+        {category} <ChevronDownIcon className="h-4 w-4 ml-1" />
+      </Button>
 
-              {expandedCategoryDesktop === category && (
-                <div
-                  ref={dropdownRefDesktop}
-                  className="absolute bg-white shadow-lg rounded-lg p-2 space-y-2 min-w-[200px] mt-1 transition-opacity duration-300 z-50 p-3"
-                  onClick={() => setExpandedCategoryDesktop(null)}
+      {expandedCategoryDesktop === category && (
+        <div
+          ref={dropdownRefDesktop}
+          className="absolute bg-white shadow-lg rounded-lg p-2 space-y-2 min-w-[200px] mt-1 transition-opacity duration-300 z-50"
+          onMouseLeave={() => setExpandedSubItemDesktop(null)}
+        >
+          {items.map((item) => (
+            <div key={item.title} className="relative">
+              {item.subItems ? (
+                <div 
+                  className="group/subitem flex items-center justify-between w-full cursor-pointer hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 p-1"
+                  onMouseEnter={() => setExpandedSubItemDesktop(item.title)}
                 >
-                  {items.map((item) => (
-                    <div key={item.title}>
-                      {item.subItems ? (
-                        <div className="flex items-center justify-between w-full cursor-pointer hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 p-1">
-                          <Link
-                            href={item.href || "#"}
-                            className="block w-full px-4 py-2 text-sm text-gray-600"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setExpandedCategoryDesktop(null);
-                              setExpandedSubItemDesktop(null);
-                            }}
-                          >
-                            <div className="flex items-center justify-between">
-                              <span>{item.title}</span>
-                              <ChevronDownIcon
-                                className={`h-4 w-4 transition-transform ${
-                                  expandedSubItemDesktop === item.title
-                                    ? "rotate-180"
-                                    : ""
-                                }`}
-                              />
-                            </div>
-                          </Link>
-                        </div>
-                      ) : (
-                        <Link
-                          href={item.href || "#"}
-                          className="block w-full hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 px-4 py-2 text-sm text-gray-600"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setExpandedCategoryDesktop(null);
-                          }}
-                        >
-                          {item.title}
-                        </Link>
-                      )}
-
-                      {item.subItems &&
-                        expandedSubItemDesktop === item.title && (
-                          <div className="pl-4">
-                            {item.subItems.map((subItem) => (
-                              <Link
-                                key={subItem.title}
-                                href={subItem.href || "#"}
-                                className="block w-full px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-                              >
-                                {subItem.title}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
+                  <Link
+                    href={item.href || "#"}
+                    className="block w-full px-4 py-2 text-sm text-gray-600"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span>{item.title}</span>
+                      <ChevronDownIcon
+                        className={`h-4 w-4 transition-transform ${
+                          expandedSubItemDesktop === item.title
+                            ? "rotate-180"
+                            : ""
+                        }`}
+                      />
                     </div>
+                  </Link>
+                </div>
+              ) : (
+                <Link
+                  href={item.href || "#"}
+                  className="block w-full hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-200 px-4 py-2 text-sm text-gray-600"
+                >
+                  {item.title}
+                </Link>
+              )}
+
+              {item.subItems && expandedSubItemDesktop === item.title && (
+                <div className="absolute left-full top-0 ml-2 bg-white shadow-lg rounded-lg p-2 space-y-2 min-w-[200px] z-50">
+                  {item.subItems.map((subItem) => (
+                    <Link
+                      key={subItem.title}
+                      href={subItem.href || "#"}
+                      className="block w-full px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+                    >
+                      {subItem.title}
+                    </Link>
                   ))}
                 </div>
               )}
             </div>
           ))}
-        </nav>
+        </div>
+      )}
+    </div>
+  ))}
+</nav>
       </div>
     </header>
   );
 }
+
 
 function MenuIcon(props) {
   return (
