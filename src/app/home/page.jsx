@@ -36,10 +36,10 @@ const buttonList=()=>{
 const Home=()=>{
     return(
     <>
-    <div className="md:flex bg-[#E6F7FF] w-full h-fit px-4 py-10 md:p-0">
-        <div className="flex flex-col w-fit bg-[#E6F7FF] py-8 mx-8 md:w-1/2 md:mx-20">
+    <div className="md:flex bg-[#E6F7FF] w-full h-fit px-4 md:p-0">
+        <div className="flex flex-col w-fit bg-[#E6F7FF] md:py-8 mx-8 md:w-1/2 md:mx-20">
             <CountDown targetDate="2025-12-18T23:59:59"/>
-            <div className="flex flex-col md:flex-row md:items-center gap-5 md:mt-24">
+            <div className="flex flex-col md:flex-row md:items-center gap-5 mt-24">
                 <img className="w-2/6 md:w-1/6 slight-tilt duration-500" src="/logos/iiitdm_logo.png"/>
                 <div className="text-2xl font-bold">
                     Indian Institute of Information Technology, Design and Manufacturing, Kancheepuram
@@ -52,7 +52,17 @@ const Home=()=>{
                 CERTIFICATES
             </button> */}
             <div className="text-lg">
-                The 8th edition of the Annual IEEE International Conference on Information Communication Technology (CICT) jointly organized by all CFIIITs.
+                The 9th edition of the Annual IEEE International Conference on Information Communication Technology (CICT) jointly organized by all CFIIITs.
+                <div className="mt-10">
+                    IMPORTANT DATES:
+                    <ul className="ml-14 list-disc marker:text-[#61CE70]">
+                        <li>Paper submission dealine:<div className="inline ml-2 text-red-500 font-bold">31st May 2025</div></li>
+                        <li>Paper acceptance notification: <div className="inline ml-2 text-red-500 font-bold">31st July 2025</div></li>
+                        <li>Deadline for camera-ready submission: <div className="inline ml-2 text-red-500 font-bold">31st August 2025</div></li>
+                        <li>Deadline for early bird registration: <div className="inline ml-2 text-red-500 font-bold">30th September 2025</div></li>
+                        <li>Deadline for standard registration: <div className="inline ml-2 text-red-500 font-bold">30th October 2025</div></li>
+                    </ul>
+                </div>
             </div>
             <div className="flex flex-col md:flex-row">
                 <a href="/calls/papers">
@@ -161,8 +171,8 @@ const Home=()=>{
                     &#9743;
                 </div>
                 <div className="text-sm flex flex-col gap-2">
-                    <p>Office Telephone: </p>
-                    <p>Mobile: </p>
+                    <p>Office Telephone: 044-27476360</p>
+                    <p>Mobile: +91 934499831</p>
                 </div>
             </div>
         </div>

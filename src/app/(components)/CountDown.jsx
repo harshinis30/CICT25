@@ -27,7 +27,7 @@ const CountDown = ({ targetDate }) => {
 
   const timebubbles=Object.keys(timeLeft).map((key,index)=>{
     return(
-        <div key={index} className="flex flex-row items-center justify-center gap-1 bg-gradient-to-br from-green-400 to-green-700 w-1/2 h-1/2 rounded-full md:py-5">
+        <div key={index} className="flex flex-row items-center justify-center bg-gradient-to-br from-purple-400 to-blue-700 rounded-lg w-14 py-1">
             <div className="text-xl text-white font-bold">
                 {timeLeft[key]}
             </div>
@@ -43,7 +43,7 @@ const CountDown = ({ targetDate }) => {
     <div className="text-xl font-bold">
         Time until Conference
     </div>
-    <div className="flex items-center justify-center gap-5">
+    <div className="flex items-center justify-start gap-5">
         {timebubbles}
     </div>
     </>
