@@ -86,33 +86,19 @@ const Page = () => {
           Important Notice Regarding Accommodation & Food Charges
         </h4>
 
-        {/* Room Charges Section */}
-        <div className="mt-4">
-          <h5 className="text-blue-700 font-bold underline">Room Charges:</h5>
-          <p className="text-black mt-2">
-            A.C. Rooms in VH1: Rs 500 (Inclusive of all taxes) per person per
-            night
-          </p>
-          <p className="text-black">
-            Rooms in VH3: Rs. 800 (Inclusive of all taxes) per person per night
-          </p>
-        </div>
 
         {/* Food Charges Section */}
         <div className="mt-4">
-          <h5 className="text-blue-700 font-bold underline">Food Charges:</h5>
           <p className="text-black mt-2">
-            The persons accompanying with registered participant need to pay
-            extra charges for food at the time of registration. The details are
-            as follows:
-          </p>
-          <ul className="text-black mt-2 space-y-1">
-            <li>6/12/2024 – Breakfast+Lunch+Dinner = Rs. 800 per person</li>
-            <li>
-              7/12/2024 – Breakfast+Lunch+Gala Dinner = Rs. 1200 per person
-            </li>
-            <li>8/12/2024 – Breakfast+Lunch+Dinner = Rs. 800 per person</li>
-          </ul>
+  <ul className="list-disc pl-5">
+    <li>All CICT 2025 conference sessions</li>
+    <li>All keynote and invited talks</li>
+    <li>Refreshments and lunch (December 19-21, 2025)</li>
+    <li>Conference dinner</li>
+    <li>Conference kit containing a bag and stationery items</li>
+  </ul>
+</p>
+
         </div>
       </div>
 

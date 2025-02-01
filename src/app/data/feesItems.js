@@ -1,29 +1,110 @@
 const feesItems = [
-    {
-      title: "IEEE Member/Student",
-      description:
-        "All IEEE members (teachers/researchers) as well as Students (IEEE membership not compulsory) should register ONLINE by paying the below registration Fee (including GST). Food and kit are complimentary but Accommodation charges are additional as per the choice and requirements.",
-      fee: "Rs. 8000",
-      foreignFee: "$250 USD for Foreign Nationals",
-      icon: "/path-to-graduation-cap-icon.png", // Replace with the actual path to the icon
-    },
-    {
-      title: "Teachers (Non-IEEE)",
-      description:
-        "All NON-IEEE Teachers/Scientists/Researchers should register ONLINE by paying the below registration Fee (including GST). Food and kit are complimentary but Accommodation charges are additional as per the choice and requirements.",
-      fee: "Rs. 9000",
-      foreignFee: "$300 USD for Foreign Nationals",
-      icon: "/path-to-teacher-icon.png", // Replace with the actual path to the icon
-    },
-    {
-      title: "Industry Participant",
-      description:
-        "All industry persons should register ONLINE by paying the below registration Fee (including GST). Food and kit are complimentary but Accommodation charges are additional as per the choice and requirements.",
-      fee: "Rs. 12000",
-      foreignFee: "$400 USD for Foreign Nationals",
-      icon: "/path-to-industry-icon.png", // Replace with the actual path to the icon
-    },
-  ];
-  
-  export default feesItems;
-  
+  {
+    title: "Student - IEEE Member (Early Bird)",
+    description: "Registration fee for IEEE student members before Oct 31st, 2025.",
+    fee: "Rs. 9000",
+    foreignFee: "$250 USD",
+    icon: "/path-to-student-icon.png",
+  },
+  {
+    title: "Student - Non IEEE Member (Early Bird)",
+    description: "Registration fee for non-IEEE student members before Oct 31st, 2025.",
+    fee: "Rs. 10000",
+    foreignFee: "$300 USD",
+    icon: "/path-to-student-icon.png",
+  },
+  {
+    title: "Faculty - IEEE Member (Early Bird)",
+    description: "Registration fee for IEEE faculty members before Oct 31st, 2025.",
+    fee: "Rs. 11000",
+    foreignFee: "$350 USD",
+    icon: "/path-to-faculty-icon.png",
+  },
+  {
+    title: "Faculty - Non IEEE Member (Early Bird)",
+    description: "Registration fee for non-IEEE faculty members before Oct 31st, 2025.",
+    fee: "Rs. 12000",
+    foreignFee: "$400 USD",
+    icon: "/path-to-faculty-icon.png",
+  },
+  {
+    title: "Industry/R&D Personnel - IEEE Member (Early Bird)",
+    description: "Registration fee for IEEE industry/R&D personnel before Oct 31st, 2025.",
+    fee: "Rs. 13000",
+    foreignFee: "$400 USD",
+    icon: "/path-to-industry-icon.png",
+  },
+  {
+    title: "Industry/R&D Personnel - Non IEEE Member (Early Bird)",
+    description: "Registration fee for non-IEEE industry/R&D personnel before Oct 31st, 2025.",
+    fee: "Rs. 14000",
+    foreignFee: "$450 USD",
+    icon: "/path-to-industry-icon.png",
+  },
+  {
+    title: "Non-Author Registration Fee (Early Bird)",
+    description: "Registration fee for attendees not presenting a paper before Oct 31st, 2025.",
+    fee: "Rs. 6000",
+    foreignFee: "$200 USD",
+    icon: "/path-to-general-icon.png",
+  },
+  {
+    title: "Student - IEEE Member (Standard)",
+    description: "Registration fee for IEEE student members after Oct 31st, 2025.",
+    fee: "Rs. 10000",
+    foreignFee: "$300 USD",
+    icon: "/path-to-student-icon.png",
+  },
+  {
+    title: "Student - Non IEEE Member (Standard)",
+    description: "Registration fee for non-IEEE student members after Oct 31st, 2025.",
+    fee: "Rs. 11000",
+    foreignFee: "$350 USD",
+    icon: "/path-to-student-icon.png",
+  },
+  {
+    title: "Faculty - IEEE Member (Standard)",
+    description: "Registration fee for IEEE faculty members after Oct 31st, 2025.",
+    fee: "Rs. 12000",
+    foreignFee: "$400 USD",
+    icon: "/path-to-faculty-icon.png",
+  },
+  {
+    title: "Faculty - Non IEEE Member (Standard)",
+    description: "Registration fee for non-IEEE faculty members after Oct 31st, 2025.",
+    fee: "Rs. 13000",
+    foreignFee: "$400 USD",
+    icon: "/path-to-faculty-icon.png",
+  },
+  {
+    title: "Industry/R&D Personnel - IEEE Member (Standard)",
+    description: "Registration fee for IEEE industry/R&D personnel after Oct 31st, 2025.",
+    fee: "Rs. 14000",
+    foreignFee: "$450 USD",
+    icon: "/path-to-industry-icon.png",
+  },
+  {
+    title: "Industry/R&D Personnel - Non IEEE Member (Standard)",
+    description: "Registration fee for non-IEEE industry/R&D personnel after Oct 31st, 2025.",
+    fee: "Rs. 15000",
+    foreignFee: "$200 USD",
+    icon: "/path-to-industry-icon.png",
+  },
+  {
+    title: "Non-Author Registration Fee (Standard)",
+    description: "Registration fee for attendees not presenting a paper after Oct 31st, 2025.",
+    fee: "Rs. 7000",
+    foreignFee: "$250 USD",
+    icon: "/path-to-general-icon.png",
+  },
+  {
+    title: "Additional Paper Fee",
+    description:
+      "An author can present another paper at a reduced fee of 50% of the original registration fee.",
+    fee: "1.5x of original registration fee",
+    foreignFee: "1.5x of original registration fee",
+    icon: "/path-to-multiple-papers-icon.png",
+  },
+];
+
+export default feesItems;

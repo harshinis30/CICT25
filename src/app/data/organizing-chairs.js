@@ -4,131 +4,36 @@ export const OrganizingChairs = {
       subheading: "Organizing Chair (Regular Tracks)",
       members: [
         {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Suneel Yadav",
-          description: "IIIT-Allahabad",
+          image: "/assets/images/organizing/p1.png",
+          title: "Dr. Priyanka Kokil",
+          description: "Associate Professor, Department of Electronics and Communication Engineering",
           socialLinks: {
-            facebook: "https://facebook.com/suneel.yadav",
-            twitter: "https://twitter.com/suneel_yadav",
-            instagram: "https://instagram.com/suneel.yadav",
-          },
+            facebook: "https://facebook.com/priyanka.kokil",
+            twitter: "https://twitter.com/priyanka_kokil",
+            instagram: "https://instagram.com/priyanka.kokil"
+          }
         },
         {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Nabajyoti Mazumdar",
-          description: "IIIT-Allahabad",
+          image: "/assets/images/organizing/p2.png",
+          title: "Prof. Masilamani V.",
+          description: "Professor, Department of Computer Science and Engineering",
           socialLinks: {
-            facebook: "https://facebook.com/nabajyoti.mazumdar",
-            twitter: "https://twitter.com/nabajyoti_mazumdar",
-            instagram: "https://instagram.com/nabajyoti.mazumdar",
-          },
+            facebook: "https://facebook.com/masilamani.v",
+            twitter: "https://twitter.com/masilamani_v",
+            instagram: "https://instagram.com/masilamani.v"
+          }
         },
         {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Naveen Saini",
-          description: "IIIT-Allahabad",
+          image: "/assets/images/organizing/p3.png",
+          title: "Prof. Sreekumar M.",
+          description: "Professor, Department of Mechanical Engineering",
           socialLinks: {
-            facebook: "https://facebook.com/naveen.saini",
-            twitter: "https://twitter.com/naveen_saini",
-            instagram: "https://instagram.com/naveen.saini",
-          },
+            facebook: "https://facebook.com/sreekumar.m",
+            twitter: "https://twitter.com/sreekumar_m",
+            instagram: "https://instagram.com/sreekumar.m"
+          }
         },
       ],
     },
-    {
-      subheading: "Organizing Chair (Special Tracks)",
-      members: [
-        {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Sonali Agrawal",
-          description: "IIIT-Allahabad",
-          socialLinks: {
-            facebook: "https://facebook.com/sonali.agrawal",
-            twitter: "https://twitter.com/sonali_agrawal",
-            instagram: "https://instagram.com/sonali.agrawal",
-          },
-        },
-        {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Rekha Verma",
-          description: "IIIT-Allahabad",
-          socialLinks: {
-            facebook: "https://facebook.com/rekha.verma",
-            twitter: "https://twitter.com/rekha_verma",
-            instagram: "https://instagram.com/rekha.verma",
-          },
-        },
-      ],
-    },
-    {
-      subheading: "Organizing Chair (Tutorials)",
-      members: [
-        {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Vrijendra Singh",
-          description: "IIIT-Allahabad",
-          socialLinks: {
-            facebook: "https://facebook.com/vrijendra.singh",
-            twitter: "https://twitter.com/vrijendra_singh",
-            instagram: "https://instagram.com/vrijendra.singh",
-          },
-        },
-        {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Bibhash Ghosal",
-          description: "IIIT-Allahabad",
-          socialLinks: {
-            facebook: "https://facebook.com/bibhash.ghosal",
-            twitter: "https://twitter.com/bibhash_ghosal",
-            instagram: "https://instagram.com/bibhash.ghosal",
-          },
-        },
-        {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Radhika Gour",
-          description: "IIIT-Allahabad",
-          socialLinks: {
-            facebook: "https://facebook.com/radhika.gour",
-            twitter: "https://twitter.com/radhika_gour",
-            instagram: "https://instagram.com/radhika.gour",
-          },
-        },
-      ],
-    },
-    {
-      subheading: "Organizing Chair (Panel Discussions)",
-      members: [
-        {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Prof. T. Lahiri",
-          description: "IIIT-Allahabad",
-          socialLinks: {
-            facebook: "https://facebook.com/t.lahiri",
-            twitter: "https://twitter.com/t_lahiri",
-            instagram: "https://instagram.com/t.lahiri",
-          },
-        },
-        {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Vijay Chaurasiya",
-          description: "IIIT-Allahabad",
-          socialLinks: {
-            facebook: "https://facebook.com/vijay.chaurasiya",
-            twitter: "https://twitter.com/vijay_chaurasiya",
-            instagram: "https://instagram.com/vijay.chaurasiya",
-          },
-        },
-        {
-          image: "/patrons/mukul_sutaone.jpg",
-          title: "Dr. Sunny Sharma",
-          description: "IIIT-Allahabad",
-          socialLinks: {
-            facebook: "https://facebook.com/sunny.sharma",
-            twitter: "https://twitter.com/sunny_sharma",
-            instagram: "https://instagram.com/sunny.sharma",
-          },
-        },
-      ],
-    },
-  ],
-};
+  ]
+}
