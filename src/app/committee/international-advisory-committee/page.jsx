@@ -16,13 +16,6 @@ export default function InternationalAdvisoryCommitteePage() {
           <SocialMediaCard key={index} person={Indian} />
         ))}
       </div>
-      <div className="p-12"></div>
-      <h2 className="text-2xl font-bold text-blue-900 text-center mb-10">Experts from Foreign Nations</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-        {InternationalAdvisoryCommittee.ExpertsFromForeign.map((Foreigner, index) => (
-          <SocialMediaCard key={index} person={Foreigner} />
-        ))}
-      </div>
     </main>
   );
 }
