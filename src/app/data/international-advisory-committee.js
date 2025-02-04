@@ -3,7 +3,7 @@ export const InternationalAdvisoryCommittee = {
     {
         title: "Prof. S Sadagopan",
         affiliation: "IIIT Kancheepuram",
-        image: "/assets/images/technical-program-committee/p1.jpg",
+        image: "/assets/images/international-advisory/p1.jpg",
         socialLinks: {
           facebook: "https://facebook.com/us.tiwary",
           twitter: "https://twitter.com/us_tiwary",
@@ -13,7 +13,7 @@ export const InternationalAdvisoryCommittee = {
     {
         title: "Prof. A K Chaturvedi",
         affiliation: "IIIT Kancheepuram",
-        image: "/assets/images/technical-program-committee/p2.jpg",
+        image: "/assets/images/international-advisory/p2.jpg",
         socialLinks: {
           facebook: "https://facebook.com/yogesh.chauhan",
           twitter: "https://twitter.com/yogesh_chauhan",
@@ -23,7 +23,7 @@ export const InternationalAdvisoryCommittee = {
     {
         title: "Prof. Ram Bilas Pachori",
         affiliation: "IIT-K",
-        image: "/assets/images/technical-program-committee/p3.jpg",
+        image: "/assets/images/international-advisory/p3.jpg",
         socialLinks: {
           facebook: "https://facebook.com/yn.singh",
           twitter: "https://twitter.com/yn_singh",
@@ -33,7 +33,7 @@ export const InternationalAdvisoryCommittee = {
     {
         title: "Prof. Nishchal K Verma",
         affiliation: "IIT-K",
-        image: "/assets/images/technical-program-committee/p4.jpg",
+        image: "/assets/images/international-advisory/p4.jpg",
         socialLinks: {
           facebook: "https://facebook.com/kumar.srivastava",
           twitter: "https://twitter.com/kumar_srivastava",

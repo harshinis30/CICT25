@@ -34,7 +34,8 @@ export default function AllCommitteesPage() {
       <CommitteeSection title="CFIIITS Steering Committee" members={CFIIITSSteeringCommittee.Members} />
       <CommitteeSection title="Technical Program Committee" members={TechnicalProgramCommittee.Members} />
       {/* Have to fix the below */}
-      <CommitteeSection title="Organizing Chairs" members={OrganizingChairs.OrganizingChairs} /> 
+      {/*Fixed. You are welcome*/}
+      <CommitteeSection title="Organizing Chairs" members={OrganizingChairs.OrganizingChairs[0].members} /> 
     </main>
   );
 }
