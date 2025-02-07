@@ -43,10 +43,13 @@ const Home=()=>{
                 <img className="w-2/6 md:w-1/6 slight-tilt duration-500" src="/logos/iiitdm_logo.png"/>
                 <div className="text-2xl font-bold">
                     Indian Institute of Information Technology, Design and Manufacturing, Kancheepuram
+                    <div className="text-sm font-light italic">
+                        An Institute of National Importance
+                    </div>
                 </div>
             </div>
             <div className="text-6xl font-black text-[#13287D] my-4">
-                IEEE CICT 2025
+                CICT 2025
             </div>
             {/* <button className="bg-[#0800F4] w-fit px-8 py-4 text-white font-bold rounded-md my-4">
                 CERTIFICATES
@@ -56,11 +59,11 @@ const Home=()=>{
                 <div className="mt-10">
                     IMPORTANT DATES:
                     <ul className="ml-14 list-disc marker:text-[#61CE70]">
-                        <li>Paper submission dealine:<div className="inline ml-2 text-red-500 font-bold">31st May 2025</div></li>
-                        <li>Paper acceptance notification: <div className="inline ml-2 text-red-500 font-bold">31st July 2025</div></li>
-                        <li>Deadline for camera-ready submission: <div className="inline ml-2 text-red-500 font-bold">31st August 2025</div></li>
-                        <li>Deadline for early bird registration: <div className="inline ml-2 text-red-500 font-bold">30th September 2025</div></li>
-                        <li>Deadline for standard registration: <div className="inline ml-2 text-red-500 font-bold">30th October 2025</div></li>
+                        <li>Paper submission dealine:<div className="inline ml-2 text-red-500 font-bold">31<sup>st</sup> May 2025</div></li>
+                        <li>Paper acceptance notification: <div className="inline ml-2 text-red-500 font-bold">31<sup>st</sup> July 2025</div></li>
+                        <li>Deadline for camera-ready submission: <div className="inline ml-2 text-red-500 font-bold">31<sup>st</sup> August 2025</div></li>
+                        <li>Deadline for early bird registration: <div className="inline ml-2 text-red-500 font-bold">30<sup>th</sup> September 2025</div></li>
+                        <li>Deadline for standard registration: <div className="inline ml-2 text-red-500 font-bold">30<sup>th</sup> October 2025</div></li>
                     </ul>
                 </div>
             </div>
@@ -92,7 +95,7 @@ const Home=()=>{
     
     <div className="mx-5 my-20">
         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-20">
-            <img className="rounded-lg" src='/temp/some.jpg' alt="Brochure"/>
+            <img className="rounded-lg" src={null} alt="Brochure"/>
             <div className="flex flex-col gap-5">
                 <span className="text-[#279E64] font-bold text-xl">
                     About CICT 2025
@@ -107,7 +110,7 @@ const Home=()=>{
                         <li>IIIT Allahabad</li>
                         <li>PDPM-IIITDM Jabalpur</li>
                         <li>IIITDM Kurnool</li>
-                        <li>Atal Bihari Vajpayee Indian Institute of Information Technology and Management (ABV-IIITM) Gwalior</li>
+                        <li>Atal Bihari Vajpayee IIITM (ABV-IIITM) Gwalior</li>
                     </ul>
                     All these institutes are fully funded by the Government of India, and the conference venue rotates among them in a round-robin fashion.
                     Since its inception, CICT has been technically and financially co-sponsored by IEEE, with all past eight editions having their proceedings available on IEEE Xplore. Additionally, prestigious government organizations like DST, ISRO, DRDO, CSIR, and several private companies have provided financial support, further strengthening the conference’s impact and outreach in the field of Information and Communication Technology (ICT).
@@ -162,12 +165,9 @@ const Home=()=>{
                     &#9993;
                 </div>
                 <div className="text-sm flex flex-col gap-2">
-                <p>
-                    Main Email: <a href="mailto:cict@iiitdm.ac.in" className="text-blue-500 underline">cict@iiitdm.ac.in</a>
-                </p>
-                <p>
-                    Inquiries: <a href="mailto:cict@iiitdm.ac.in" className="text-blue-500 underline">cict@iiitdm.ac.in</a>
-                </p>
+                    <p className="text-blue-500 underline">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cict@iiitdm.ac.in" target="_blank" rel="noopener noreferrer">cict@iiitdm.ac.in</a>
+                    </p>
                 </div>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center border-solid border-l-[1px] pt-5 pb-10 px-10 gap-2">
@@ -176,7 +176,7 @@ const Home=()=>{
                 </div>
                 <div className="text-sm flex flex-col gap-2">
                     <p>Office Telephone: 044-27476360</p>
-                    <p>Mobile: +91 934499831</p>
+                    <p>Mobile: +91 9344998831</p>
                 </div>
             </div>
         </div>
