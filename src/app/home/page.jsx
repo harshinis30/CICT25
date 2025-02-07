@@ -100,7 +100,7 @@ const Home=()=>{
                 <span className="text-[#13287D] font-extrabold text-3xl">
                     IEEE CICT 2025 IIITDM Kancheepuram
                 </span>
-                <div className="text-xl text-gray-500">
+                <div className="text-xl text-gray-700">
                     The International Conference on Information and Communication Technology (CICT) is an annual event organized by five Indian Institutes of Information Technology (IIITs), namely:
                     <ul className="list-disc ml-24">
                         <li>IIITDM Kancheepuram</li>
@@ -162,8 +162,12 @@ const Home=()=>{
                     &#9993;
                 </div>
                 <div className="text-sm flex flex-col gap-2">
-                    <p>Main Email: cict@iiitdm.ac.in</p>
-                    <p>Inquiries: cict@iiitdm.ac.in</p>
+                <p>
+                    Main Email: <a href="mailto:cict@iiitdm.ac.in" className="text-blue-500 underline">cict@iiitdm.ac.in</a>
+                </p>
+                <p>
+                    Inquiries: <a href="mailto:cict@iiitdm.ac.in" className="text-blue-500 underline">cict@iiitdm.ac.in</a>
+                </p>
                 </div>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center border-solid border-l-[1px] pt-5 pb-10 px-10 gap-2">

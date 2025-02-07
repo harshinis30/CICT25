@@ -8,11 +8,11 @@ const About = () => {
       <span className="text-[#13287D] text-center font-extrabold text-3xl">
         Conference on Information and Communication Technology(CICT)
       </span>
-      <div className="text-lg text-gray-500">
-        The IEEE Conference on Information and Communication Technology (CICT) is a prestigious annual conference organized by the all Centrally Funded Technical Institutions (CFTI) Indian Institutes of Information Technology (IIITs).  It provides a worldwide forum for scholars, industry professionals, researchers, and students to showcase their most recent findings and technological innovations in the Information and Communication Technology (ICT) domain. IEEE CICT 2025 will be hosted by the Indian Institute of Information Technology, Design and Manufacturing (IIITDM) Kancheepuram. Theme for the conference for year 2025 is Artificial Intelligence (AI) and ICT.
+      <div className="text-lg text-gray-700">
+        The IEEE Conference on Information and Communication Technology (CICT) is a prestigious annual conference organized by all Centrally Funded Technical Institutions (CFTIs) and Indian Institutes of Information Technology (IIITs). It provides a worldwide forum for scholars, industry professionals, researchers, and students to showcase their most recent findings and technological innovations in the Information and Communication Technology (ICT) domain. IEEE CICT 2025 will be hosted by the Indian Institute of Information Technology, Design and Manufacturing (IIITDM) Kancheepuram. The theme for the conference for the year 2025 is Artificial Intelligence (AI) and ICT.
       </div>
       <div className="flex items-center justify-around">
-        <div className="text-[#13287D] font-bold">
+        <div className="text-[#13287D] font-bold text-center">
             <p>Previous Edition of CICT</p>
             <a href="https://ieeexplore.ieee.org/xpl/conhome/1823245/all-proceedings" target="_blank">
                 <button className="
