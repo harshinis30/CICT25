@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="flex flex-col justify-center items-center lg:items-start lg:w-1/3 w-4/5 text-center lg:text-left">
                         <h1 className="font-semibold text-2xl">CICT 2025</h1>
                         <p className="mb-4">
-                            Conference on Information Communication Technology 2025 {"(CICT-2025)"}
+                            Conference on Information Communication Technology 2025 {"(CICT 2025)"}
                         </p>
                         <div className="flex items-start lg:items-center gap-4">
 
@@ -21,7 +21,9 @@ const Footer = () => {
                             </p>
                         </div>
                         <Button className="mt-4 w-3/5 h-12 bg-orange-400 rounded-full text-black text-md font-semibold transition-transform hover:scale-105 ease-in-out transition-duration-300">
-                            Contact Us
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cict@iiitdm.ac.in" target='_blank' rel="noopener noreferrer">
+                                Contact Us  
+                            </a>
                         </Button>
                     </div>
 
