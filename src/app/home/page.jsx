@@ -103,7 +103,7 @@ const Home=()=>{
                 <span className="text-[#13287D] font-extrabold text-3xl">
                     IEEE CICT 2025 IIITDM Kancheepuram
                 </span>
-                <div className="text-xl text-gray-500">
+                <div className="text-xl text-gray-700">
                     The International Conference on Information and Communication Technology (CICT) is an annual event organized by five Indian Institutes of Information Technology (IIITs), namely:
                     <ul className="list-disc ml-24">
                         <li>IIITDM Kancheepuram</li>

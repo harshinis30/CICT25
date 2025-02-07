@@ -221,11 +221,11 @@ export default function Component() {
           <Image
             src="/logos/image.png"
             alt="IIITDM Logo"
-            width={48}
-            height={48}
+            width={64}
+            height={64}
             quality={100}
             priority
-            className="h-12 w-12 object-contain"
+            className="h-16 w-16 object-contain"
           />
           <div className="flex flex-col -space-y-1">
             <p className="text-xl font-bold text-blue-600">CICT</p>
