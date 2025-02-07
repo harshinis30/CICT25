@@ -86,7 +86,8 @@ const Home=()=>{
                 </a>
             </div>
         </div>
-        <img className="md:w-1/2 w-full" src='/home_img/institute.jpg'/>
+        <div className="bg-[url(/home_img/institute.jpg)] w-full h-[50vh] md:h-auto bg-cover bg-no-repeat bg-center">
+        </div>
     </div>
 
     <div className="pb-24 bg-[#13287D]">
