@@ -269,6 +269,35 @@ const Page = () => {
           </ScrollFadeIn>
         </div>
         <ScrollFadeIn>
+  <div className="overflow-x-auto p-4 md:p-6">
+    <table className="w-full border border-gray-300">
+      <thead>
+        <tr className="bg-gray-200">
+          <th className="border border-gray-300 px-4 py-2">Icon</th>
+          <th className="border border-gray-300 px-4 py-2">Title</th>
+          <th className="border border-gray-300 px-4 py-2">Description</th>
+          <th className="border border-gray-300 px-4 py-2">Fee</th>
+          <th className="border border-gray-300 px-4 py-2">Foreign Fee</th>
+        </tr>
+      </thead>
+      <tbody>
+        {feesItems.map((item, index) => (
+          <tr key={index} className="border border-gray-300 text-center">
+            <td className="border border-gray-300 px-4 py-2">
+              <img src={item.icon} alt="icon" className="w-8 h-8 mx-auto" />
+            </td>
+            <td className="border border-gray-300 px-4 py-2">{item.title}</td>
+            <td className="border border-gray-300 px-4 py-2">{item.description}</td>
+            <td className="border border-gray-300 px-4 py-2">{item.fee}</td>
+            <td className="border border-gray-300 px-4 py-2">{item.foreignFee}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</ScrollFadeIn>
+
+        <ScrollFadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 p-4 md:p-6">
             {feesItems.map((item, index) => (
               <Card
