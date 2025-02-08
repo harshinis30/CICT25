@@ -30,7 +30,7 @@ export default function AllCommitteesPage() {
       <h2 className="text-2xl font-bold text-blue-900 text-center mb-10">CICT 2025: Ninth IEEE International Conference Jointly organized by CFIIITs at IIITDM-Kancheepuram UP India</h2>
       <CommitteeSection title="Patrons" members={Patrons.Patrons} />
       <CommitteeSection title="General Chair" members={GeneralChair.Members} />
-      <CommitteeSection title="International Advisory Committee" members={InternationalAdvisoryCommittee.ExpertsFromIndia} />
+      <CommitteeSection title="Advisory committee" members={InternationalAdvisoryCommittee.ExpertsFromIndia} />
       <CommitteeSection title="CFIIITS Steering Committee" members={CFIIITSSteeringCommittee.Members} />
       <CommitteeSection title="Technical Program Committee" members={TechnicalProgramCommittee.Members} />
       {/* Have to fix the below */}

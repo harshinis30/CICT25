@@ -9,7 +9,7 @@ import SocialMediaCard from "@/app/(components)/SocialMediaCard";
 export default function InternationalAdvisoryCommitteePage() {
   return (
     <main className="container mx-auto my-10 px-4">
-      <h1 className="text-5xl text-blue-900 font-bold text-center mb-7">International Advisory Committee</h1>  
+      <h1 className="text-5xl text-blue-900 font-bold text-center mb-7">Advisory committee</h1>  
       <ScrollFadeIn>
       <div className="flex flex-wrap justify-center gap-8">
         {InternationalAdvisoryCommittee.ExpertsFromIndia.map((Indian, index) => (
