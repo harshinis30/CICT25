@@ -24,7 +24,7 @@ export const navItems = {
       href: "/committee/cfiiits-steering-committee",
     },
     {
-      title: "International Advisory Committee",
+      title: "Advisory Committee",
       href: "/committee/international-advisory-committee",
     },
     {

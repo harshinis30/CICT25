@@ -102,16 +102,16 @@ const Home=()=>{
                     About CICT 2025
                 </span>
                 <span className="text-[#13287D] font-extrabold text-3xl">
-                    IEEE CICT 2025 IIITDM Kancheepuram
+                    IEEE CICT 2025 Indian Institute of Information Technology, Design and Manufacturing Kancheepuram
                 </span>
                 <div className="text-xl text-gray-700">
                     The International Conference on Information and Communication Technology (CICT) is an annual event organized by five Indian Institutes of Information Technology (IIITs), namely:
                     <ul className="list-disc ml-24">
-                        <li>IIITDM Kancheepuram</li>
-                        <li>IIIT Allahabad</li>
-                        <li>PDPM-IIITDM Jabalpur</li>
-                        <li>IIITDM Kurnool</li>
-                        <li>Atal Bihari Vajpayee IIITM (ABV-IIITM) Gwalior</li>
+                        <li>Indian Institute of Information Technology, Design and Manufacturing Kancheepuram</li>
+                        <li>Indian Institute of Information Technology,  Allahabad</li>
+                        <li>PDPM-Indian Institute of Information Technology, Design and Manufacturing Jabalpur</li>
+                        <li>Indian Institute of Information Technology, Design and Manufacturing Kurnool</li>
+                        <li>Atal Bihari Vajpayee Indian Institute of Information Technology, Manufacturing (ABV-IIITM) Gwalior</li>
                     </ul>
                     All these institutes are fully funded by the Government of India, and the conference venue rotates among them in a round-robin fashion.
                     Since its inception, CICT has been technically and financially co-sponsored by IEEE, with all past eight editions having their proceedings available on IEEE Xplore. Additionally, prestigious government organizations like DST, ISRO, DRDO, CSIR, and several private companies have provided financial support, further strengthening the conference’s impact and outreach in the field of Information and Communication Technology (ICT).
