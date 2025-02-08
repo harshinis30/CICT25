@@ -20,7 +20,7 @@ const Footer = () => {
                                 Chennai, Tamil Nadu, India-600127
                             </p>
                         </div>
-                        <Button className="mt-4 w-3/5 h-12 bg-orange-400 rounded-full text-black text-md font-semibold transition-transform hover:scale-105 ease-in-out transition-duration-300">
+                        <Button className="mt-4 w-3/5 h-12 bg-orange-400 hover:bg-orange-400 rounded-full text-black text-md font-semibold transition-transform hover:scale-105 ease-in-out transition-duration-300">
                             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cict@iiitdm.ac.in" target='_blank' rel="noopener noreferrer">
                                 Contact Us  
                             </a>
