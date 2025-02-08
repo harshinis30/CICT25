@@ -70,13 +70,13 @@ const Footer = () => {
                         <h1 className="font-semibold text-xl mb-4">ieeeXplore Links</h1>
                         {[
                             ['IIIT Allahabad: CICT 2024', "#"],
-                            ['IIITDM Jabalpur: CICT 2023', "#"],
-                            ['ABV-IIITM Gwalior: CICT 2022', "#"],
-                            ['IIITDM Kurnool: CICT 2021', "#"],
-                            ['IIITDM Kancheepuram: CICT 2020', "#"],
-                            ['IIIT Allahabad: CICT 2019', "#"],
-                            ['IIITDM Jabalpur: CICT 2018', "#"],
-                            ['ABV-IIITM Gwalior: CICT 2017', "#"],
+                            ['IIITDM Jabalpur: CICT 2023', "https://ieeexplore.ieee.org/xpl/conhome/10455089/proceeding"],
+                            ['ABV-IIITM Gwalior: CICT 2022', "https://ieeexplore.ieee.org/xpl/conhome/9997570/proceeding"],
+                            ['IIITDM Kurnool: CICT 2021', "https://ieeexplore.ieee.org/xpl/conhome/9672322/proceeding"],
+                            ['IIITDM Kancheepuram: CICT 2020', "https://ieeexplore.ieee.org/xpl/conhome/9312029/proceeding"],
+                            ['IIIT Allahabad: CICT 2019', "https://ieeexplore.ieee.org/xpl/conhome/9051888/proceeding"],
+                            ['IIITDM Jabalpur: CICT 2018', "https://ieeexplore.ieee.org/xpl/conhome/8716495/proceeding"],
+                            ['ABV-IIITM Gwalior: CICT 2017', "https://ieeexplore.ieee.org/xpl/conhome/8335884/proceeding"],
                         ].map((link, index) => (
                             <Link key={index} href={link[1]} target="_blank" className="mb-2 hover:text-green-500 hover:text-opacity-60 transition-colors duration-300 ease-in-out">
                                 {link[0]}
