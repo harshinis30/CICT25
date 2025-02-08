@@ -50,6 +50,6 @@ export const Co_Patrons = {
           instagram: "https://instagram.com/dvln.somayajulu",
         },
       },
-    ],
+    ].sort((a, b) => a.title.localeCompare(b.title)),
   };
   

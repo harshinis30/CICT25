@@ -35,5 +35,5 @@ export const OrganizingChairs = {
         },
       ],
     },
-  ]
+  ].sort((a, b) => a.title.localeCompare(b.title))
 }

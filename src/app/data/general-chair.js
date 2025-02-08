@@ -30,5 +30,5 @@ export const GeneralChair = {
           instagram: "https://instagram.com/yn.singh"
         }
     },
-  ]
+  ].sort((a, b) => a.title.localeCompare(b.title))
 };

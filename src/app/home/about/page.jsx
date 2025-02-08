@@ -4,12 +4,21 @@ import PreviousOrganizersList from '../PreviousOrganizerList'
 
 const About = () => {
   return (
-    <div className="mx-32 my-20 flex flex-col gap-5">
-      <span className="text-[#13287D] text-center font-extrabold text-3xl">
-        Conference on Information and Communication Technology(CICT)
-      </span>
-      <div className="text-lg text-gray-700">
-        The IEEE Conference on Information and Communication Technology (CICT) is a prestigious annual conference organized by all Centrally Funded Technical Institutions (CFTIs) and Indian Institutes of Information Technology (IIITs). It provides a worldwide forum for scholars, industry professionals, researchers, and students to showcase their most recent findings and technological innovations in the Information and Communication Technology (ICT) domain. IEEE CICT 2025 will be hosted by the Indian Institute of Information Technology, Design and Manufacturing (IIITDM) Kancheepuram. The theme for the conference for the year 2025 is Artificial Intelligence (AI) and ICT.
+    <div className="mx-32 my-20 flex flex-col gap-5 align-middle text-center">
+<div className="inline-block">
+  <span className="text-[#b04b26] font-extrabold text-3xl">
+    Conference
+  </span>
+  <span>'  '</span>
+  <span className="text-[#13287D] font-extrabold text-3xl">
+    on Information and Communication Technology
+  </span>
+</div>
+
+      <div className="text-lg text-gray-900">
+       The IEEE Conference on Information and Communication Technology (CICT) is a prestigious annual event organized by all Centrally Funded Technical Institutions (CFTIs) and Indian Institutes of Information Technology (IIITs). It serves as a global platform for scholars, industry professionals, researchers, and students to present their latest findings and technological advancements in the field of Information and Communication Technology (ICT).
+
+The 9th edition of IEEE CICT 2025 will be hosted by the Indian Institute of Information Technology, Design and Manufacturing (IIITDM) Kancheepuram. The theme for the 2025 conference is Artificial Intelligence (AI) and ICT.
       </div>
       <div className="flex items-center justify-around">
         <div className="text-[#13287D] font-bold text-center">

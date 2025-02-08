@@ -90,5 +90,5 @@ export const TechnicalProgramCommittee = {
           instagram: "https://instagram.com/manav.bhatnagar"
         }
     }
-  ]
+  ].sort((a, b) => a.title.localeCompare(b.title))
 };

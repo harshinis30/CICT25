@@ -50,5 +50,5 @@ export const Patrons = {
         instagram: "https://instagram.com/dvln.somayajulu",
       },
     },
-  ],
+  ].sort((a, b) => a.title.localeCompare(b.title)),
 };

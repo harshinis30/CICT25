@@ -100,5 +100,5 @@ export const CFIIITSSteeringCommittee = {
         instagram: "https://instagram.com/kk.naik",
       },
     },
-  ],
+  ].sort((a, b) => a.title.localeCompare(b.title)),
 };
