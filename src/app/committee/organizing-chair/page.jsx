@@ -5,8 +5,8 @@ import { OrganizingChairs } from '@/app/data/organizing-chairs';
 
 const page = () => {
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center gap-4 mt-10 px-4">
-      <div className="flex h-16 items-center font-sans text-5xl text-blue-800 font-bold mt-20">
+    <div className="min-h-screen bg-white flex flex-col items-center gap-4 px-4">
+      <div className="flex h-16 items-center font-sans text-5xl text-blue-800 font-bold mt-10">
         Organising Chair
       </div>
       
@@ -17,7 +17,7 @@ const page = () => {
           </div>
 
           <ScrollFadeIn>
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:mx-40 justify-center gap-8">
               {chairs.members.map((member, memberIndex) => (
                 <SocialMediaCard key={memberIndex} person={member} />
               ))}
