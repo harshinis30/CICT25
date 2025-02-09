@@ -5,9 +5,9 @@ export const CFIIITSSteeringCommittee = {
       title: "Prof. Aditya Trivedi",
       description: "ABV-IIITM, Gwalior",
       socialLinks: {
-        facebook: "https://facebook.com/aditya.trivedi",
-        twitter: "https://twitter.com/aditya_trivedi",
-        instagram: "https://instagram.com/aditya.trivedi",
+        facebook: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Prof.Aditya",
+        twitter: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Prof.Aditya",
+        instagram: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Prof.Aditya",
       },
     },
     {
@@ -15,59 +15,9 @@ export const CFIIITSSteeringCommittee = {
       title: "Dr. W Godfrey Wilfred",
       description: "ABV-IIITM, Gwalior",
       socialLinks: {
-        facebook: "https://facebook.com/w.godfrey.wilfred",
-        twitter: "https://twitter.com/w_godfrey_wilfred",
-        instagram: "https://instagram.com/w.godfrey.wilfred",
-      },
-    },
-    {
-      image: "/assets/images/committee/p3.png",
-      title: "Prof. Neetesh Purohit",
-      description: "IIITA",
-      socialLinks: {
-        facebook: "https://facebook.com/neetesh.purohit",
-        twitter: "https://twitter.com/neetesh_purohit",
-        instagram: "https://instagram.com/neetesh.purohit",
-      },
-    },
-    {
-      image: "/assets/images/committee/p4.png",
-      title: "Dr. Satish K. Singh",
-      description: "IIITA",
-      socialLinks: {
-        facebook: "https://facebook.com/satish.k.singh",
-        twitter: "https://twitter.com/satish_k_singh",
-        instagram: "https://instagram.com/satish.k.singh",
-      },
-    },
-    {
-      image: "/assets/images/committee/p5.png",
-      title: "Dr. Rajat Kumar Singh",
-      description: "IIIT Allahabad",
-      socialLinks: {
-        facebook: "https://facebook.com/rajat.kumar.singh",
-        twitter: "https://twitter.com/rajat_kumar_singh",
-        instagram: "https://instagram.com/rajat.kumar.singh",
-      },
-    },
-    {
-      image: "/assets/images/committee/p6.png",
-      title: "Dr. Matadeen Bansal",
-      description: "IIITDM Jabalpur",
-      socialLinks: {
-        facebook: "https://facebook.com/matadeen.bansal",
-        twitter: "https://twitter.com/matadeen_bansal",
-        instagram: "https://instagram.com/matadeen.bansal",
-      },
-    },
-    {
-      image: "/assets/images/committee/p7.png",
-      title: "Prof. M Sreekumar",
-      description: "IIITDM Kancheepuram",
-      socialLinks: {
-        facebook: "https://facebook.com/msreekumar",
-        twitter: "https://twitter.com/msreekumar",
-        instagram: "https://instagram.com/msreekumar",
+        facebook: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.WWilfredGodfrey",
+        twitter: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.WWilfredGodfrey",
+        instagram: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.WWilfredGodfrey",
       },
     },
     {
@@ -75,9 +25,40 @@ export const CFIIITSSteeringCommittee = {
       title: "Prof. V Masilamani",
       description: "IIITDM Kancheepuram",
       socialLinks: {
-        facebook: "https://facebook.com/vmasilamani",
-        twitter: "https://twitter.com/vmasilamani",
-        instagram: "https://instagram.com/vmasilamani",
+        facebook: "https://www.iiitdm.ac.in/people/faculty/masila@iiitdm.ac.in",
+        twitter: "https://www.iiitdm.ac.in/people/faculty/masila@iiitdm.ac.in",
+        instagram: "https://www.iiitdm.ac.in/people/faculty/masila@iiitdm.ac.in",
+      },
+    },
+    {
+      image: "/assets/images/committee/p6.png",
+      title: "Dr. Matadeen Bansal",
+      description: "IIITDM Jabalpur",
+      socialLinks: {
+        facebook: "http://faculty.iiitdmj.ac.in/faculty/mbansal",
+        twitter: "http://faculty.iiitdmj.ac.in/faculty/mbansal",
+        instagram: "http://faculty.iiitdmj.ac.in/faculty/mbansal",
+      },
+    },
+    
+    {
+      image: "/assets/images/committee/p10.png",
+      title: "Dr. K. K. Naik",
+      description: "IIITDM Kurnool",
+      socialLinks: {
+        facebook: "https://iiitk.ac.in/Dr.-K.-Krishna-Naik/page",
+        twitter: "https://iiitk.ac.in/Dr.-K.-Krishna-Naik/page",
+        instagram: "https://iiitk.ac.in/Dr.-K.-Krishna-Naik/page",
+      },
+    },
+    {
+      image: "/assets/images/committee/p3.png",
+      title: "Prof. Neetesh Purohit",
+      description: "IIITA",
+      socialLinks: {
+        facebook: "https://profile.iiita.ac.in/np/",
+        twitter: "https://profile.iiita.ac.in/np/",
+        instagram: "https://profile.iiita.ac.in/np/",
       },
     },
     {
@@ -85,20 +66,45 @@ export const CFIIITSSteeringCommittee = {
       title: "Dr. Priyanka Kokil",
       description: "IIITDM Kancheepuram",
       socialLinks: {
-        facebook: "https://facebook.com/priyanka.kokil",
-        twitter: "https://twitter.com/priyanka_kokil",
-        instagram: "https://instagram.com/priyanka.kokil",
+        facebook: "https://www.iiitdm.ac.in/people/faculty/priyanka@iiitdm.ac.in",
+        twitter: "https://www.iiitdm.ac.in/people/faculty/priyanka@iiitdm.ac.in",
+        instagram: "https://www.iiitdm.ac.in/people/faculty/priyanka@iiitdm.ac.in",
       },
     },
     {
-      image: "/assets/images/committee/p10.png",
-      title: "Dr. K. K. Naik",
-      description: "IIITDM Kurnool",
+      image: "/assets/images/committee/p5.png",
+      title: "Dr. Rajat Kumar Singh",
+      description: "IIIT Allahabad",
       socialLinks: {
-        facebook: "https://facebook.com/kk.naik",
-        twitter: "https://twitter.com/kk_naik",
-        instagram: "https://instagram.com/kk.naik",
+        facebook: "https://iiita.irins.org/profile/102943",
+        twitter: "https://iiita.irins.org/profile/102943",
+        instagram: "https://iiita.irins.org/profile/102943",
       },
     },
-  ].sort((a, b) => a.title.localeCompare(b.title)),
+    {
+      image: "/assets/images/committee/p4.png",
+      title: "Dr. Satish K. Singh",
+      description: "IIITA",
+      socialLinks: {
+        facebook: "https://it.iiita.ac.in/?pg=facultypage&uid=sk.singh",
+        twitter: "https://it.iiita.ac.in/?pg=facultypage&uid=sk.singh",
+        instagram: "https://it.iiita.ac.in/?pg=facultypage&uid=sk.singh",
+      },
+    },
+    
+    
+    {
+      image: "/assets/images/committee/p7.png",
+      title: "Prof. M Sreekumar",
+      description: "IIITDM Kancheepuram",
+      socialLinks: {
+        facebook: "https://www.iiitdm.ac.in/people/faculty/msk@iiitdm.ac.in",
+        twitter: "https://www.iiitdm.ac.in/people/faculty/msk@iiitdm.ac.in",
+        instagram: "https://www.iiitdm.ac.in/people/faculty/msk@iiitdm.ac.in",
+      },
+    },
+   
+    
+    
+  ],
 };
